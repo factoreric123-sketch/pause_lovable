@@ -1,97 +1,72 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
+import Footer from "@/components/pause/Footer";
+import { setCanonical, setSocialMeta } from "@/lib/canonical";
+import { SITE } from "@/config/site";
 
 const Terms = () => {
   useEffect(() => {
     setCanonical("/terms");
     setSocialMeta({
-      title: "Terms & Conditions | Detach",
-      description:
-        "The terms that apply when you use the Detach app or buy a Detach card.",
+      title: `Terms & Conditions | ${SITE.name}`,
+      description: `The terms that apply when you use ${SITE.name}.`,
       path: "/terms",
-      type: "website",
     });
-    return () => {
-      resetCanonical();
-      resetSocialMeta();
-    };
   }, []);
 
   return (
-    <div className="min-h-screen bg-background px-6 py-16">
-      <div className="max-w-3xl mx-auto">
-        <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8">
-          <ArrowLeft className="w-4 h-4" />
-          Back to home
+    <div className="min-h-screen bg-background">
+      <main className="mx-auto max-w-2xl px-6 pb-20 pt-24">
+        <Link
+          to="/"
+          className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <ArrowLeft className="h-4 w-4" /> Back to home
         </Link>
+        <h1 className="font-display text-4xl font-extrabold tracking-tight">Terms &amp; Conditions</h1>
+        <p className="mt-2 text-sm text-muted-foreground">Last updated: {new Date().getFullYear()}</p>
 
-        <h1 className="text-4xl font-bold mb-8">Terms & Conditions</h1>
-        <p className="text-muted-foreground mb-6">Last updated: February 16, 2026</p>
+        <div className="legal-content mt-8">
+          <h2>Using the app</h2>
+          <p>
+            {SITE.name} is an iPhone app that lets you create rules for the apps you choose. You are responsible for the
+            rules you set and for how you use your device.
+          </p>
 
-        <div className="space-y-8 text-secondary-foreground leading-relaxed">
-          <section>
-            <h2 className="text-xl font-bold mb-3">Acceptance of Terms</h2>
-            <p className="text-muted-foreground">
-              By downloading and using Detach, you agree to be bound by these Terms and Conditions.
-              If you do not agree to these terms, please do not use the app.
-            </p>
-          </section>
+          <h2>Availability</h2>
+          <p>
+            The app is currently available for iPhone through the Apple App Store. We may update, change or discontinue
+            features over time.
+          </p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3">Use of the App</h2>
-            <p className="text-muted-foreground">
-              Detach is a digital wellness tool that helps you manage screen time by blocking apps and websites
-              during focus sessions. The app uses Apple's Screen Time API and NFC technology to provide its functionality.
-              You are responsible for your own use of the app and any consequences thereof.
-            </p>
-          </section>
+          <h2>No guarantees</h2>
+          <p>
+            The app is provided as is. We do not guarantee that a rule will prevent every possible way of reaching a
+            blocked app, and we are not liable for any outcome of using or not using the app.
+          </p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3">Strict Mode</h2>
-            <p className="text-muted-foreground">
-              When Strict Mode is enabled, you cannot end a focus session by deleting the app.
-              By enabling Strict Mode, you acknowledge that you are voluntarily restricting your ability to
-              end sessions early. Detach is not responsible for any inconvenience caused by Strict Mode.
-            </p>
-          </section>
+          <h2>Purchases</h2>
+          <p>
+            Any purchases are handled by Apple. Refunds and billing questions are subject to Apple's App Store policies.
+          </p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3">Emergency Overrides</h2>
-            <p className="text-muted-foreground">
-              Emergency overrides allow you to end a session without tapping your NFC tag.
-              These are limited in number and intended only for genuine emergencies.
-              Misuse of emergency overrides is at your own discretion and responsibility.
-            </p>
-          </section>
+          <h2>Intellectual property</h2>
+          <p>
+            The {SITE.name} name, app, and this website, including their design and content, belong to us and may not be
+            copied without permission.
+          </p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3">Disclaimer</h2>
-            <p className="text-muted-foreground">
-              Detach is provided "as is" without warranty of any kind. We do not guarantee that the app will
-              be error-free or uninterrupted. We are not responsible for any damages arising from the use of
-              the app, including but not limited to missed communications during focus sessions.
-            </p>
-          </section>
+          <h2>Changes to these terms</h2>
+          <p>We may update these terms. Continued use of the app means you accept the current version.</p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3">Changes to Terms</h2>
-            <p className="text-muted-foreground">
-              We reserve the right to modify these terms at any time. Changes will be reflected in the app
-              and on our website. Continued use of the app after changes constitutes acceptance of the new terms.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold mb-3">Contact</h2>
-            <p className="text-muted-foreground">
-              For questions about these Terms & Conditions,{" "}
-              <Link to="/contact" className="text-primary hover:underline">contact us</Link>.
-            </p>
-          </section>
+          <h2>Contact</h2>
+          <p>
+            Questions? Email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+          </p>
         </div>
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 };
