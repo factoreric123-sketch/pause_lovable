@@ -1,0 +1,208 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Apple, ArrowRight, Smartphone, Shield, Zap, Users, HelpCircle } from "lucide-react";
+import Navbar from "@/components/landing/Navbar";
+import Footer from "@/components/landing/Footer";
+import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
+
+const steps = [
+  {
+    icon: Shield,
+    title: "Choose What to Block",
+    description: "Select which social media apps and websites you want blocked during focus sessions.",
+  },
+  {
+    icon: Smartphone,
+    title: "Tap Your Card",
+    description: "When you're ready to focus, start a session. Blocked apps are completely inaccessible until you tap the Detach card.",
+  },
+  {
+    icon: Zap,
+    title: "Stay Focused",
+    description: "Blocked apps are completely inaccessible. Tap the card again when your session is over.",
+  },
+];
+
+const audiences = [
+  "Students who need to focus during study sessions",
+  "Professionals who want distraction-free work time",
+  "Parents looking to manage their own screen time",
+  "Anyone trying to reduce social media usage",
+  "People who've tried other app blockers and failed",
+];
+
+const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Detach",
+  operatingSystem: "iOS 17",
+  applicationCategory: "HealthApplication",
+  applicationSubCategory: "App Blocker",
+  description:
+    "Detach is a free iPhone app blocker that works with an optional $9.99 physical card. Blocked apps stay blocked until you physically tap the card.",
+  url: "https://getdetach.app/detach-app",
+  downloadUrl: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+  brand: { "@type": "Brand", name: "Detach" },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "27",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    url: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+    priceValidUntil: "2027-12-31",
+  },
+};
+
+const DetachApp = () => {
+  useEffect(() => {
+    setCanonical("/detach-app");
+    setSocialMeta({
+      title: "What is Detach App? The App Blocker That Reduces Screen Time",
+      description:
+        "Detach is an app blocker that blocks social media and reduces screen time using NFC tags. Learn how the Detach app works, who it's for, and why it's different.",
+      path: "/detach-app",
+      type: "website",
+    });
+    return () => {
+      resetCanonical();
+      resetSocialMeta();
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
+      />
+      <Navbar />
+
+      <main className="pt-24 pb-16 px-6">
+        <div className="max-w-3xl mx-auto">
+          {/* Hero */}
+          <section className="text-center mb-20">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              What is <span className="text-gradient">Detach App</span>?{" "}
+              <span className="block mt-2 text-2xl md:text-3xl text-muted-foreground font-semibold">
+                The App Blocker That Reduces Screen Time
+              </span>
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-8">
+              Detach is an app blocker that helps you reduce screen time by blocking social media and distracting apps on your iPhone. Instead of relying on willpower, Detach uses physical NFC tags to create real friction between you and your screen.
+            </p>
+            <a
+              href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-all"
+            >
+              <Apple className="w-5 h-5" />
+              Try Detach Free
+            </a>
+          </section>
+
+          {/* How It Works */}
+          <section className="mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+              How the Detach App Blocker Works
+            </h2>
+            <div className="space-y-6">
+              {steps.map((step, i) => (
+                <div key={step.title} className="glass-card p-6 flex gap-5 items-start">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                    <step.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">
+                      <span className="text-primary mr-2">{i + 1}.</span>
+                      {step.title}
+                    </h3>
+                    <p className="text-muted-foreground">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Who It's For */}
+          <section className="mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+              Who is the Detach App For?
+            </h2>
+            <div className="glass-card p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Users className="w-5 h-5 text-primary" />
+                <span className="font-semibold">Detach is for:</span>
+              </div>
+              <ul className="space-y-3">
+                {audiences.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="text-accent mt-1">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          {/* FAQ link */}
+          <section className="mb-20">
+            <div className="glass-card p-8 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <HelpCircle className="w-6 h-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h2 className="text-xl font-bold mb-1">Have questions?</h2>
+                <p className="text-muted-foreground">
+                  See the full Detach FAQ for answers about setup, blocking, Android, shipping, and more.
+                </p>
+              </div>
+              <Link
+                to="/detach-faq"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline shrink-0"
+              >
+                Read FAQ
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </section>
+
+          {/* CTA */}
+          <section className="text-center glass-card p-10">
+            <h2 className="text-2xl font-bold mb-3">Ready to Try Detach?</h2>
+            <p className="text-muted-foreground mb-6">
+              Download the Detach app blocker for free and start reducing your screen time today.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://apps.apple.com/us/app/detach-screen-break/id6759267252"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-all"
+              >
+                <Apple className="w-5 h-5" />
+                Download Free
+              </a>
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+              >
+                Read the Blog
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default DetachApp;

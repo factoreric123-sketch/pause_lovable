@@ -1,0 +1,62 @@
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import Index from "./pages/Index";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
+import Contact from "./pages/Contact";
+import DetachApp from "./pages/DetachApp";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import Shop from "./pages/Shop";
+import ReviewsPage from "./pages/Reviews";
+import LifeInDotsPage from "./pages/LifeInDots";
+import FactsPage from "./pages/FactsPage";
+import NfcAppBlocker from "./pages/NfcAppBlocker";
+import BrickAlternative from "./pages/BrickAlternative";
+import DetachVsBrick from "./pages/DetachVsBrick";
+import HowNfcFocusAppsWork from "./pages/HowNfcFocusAppsWork";
+import Compare from "./pages/Compare";
+import DetachFaq from "./pages/DetachFaq";
+import NotFound from "./pages/NotFound";
+import Unsubscribe from "./pages/Unsubscribe";
+
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/detach-app" element={<DetachApp />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
+          <Route path="/life-in-dots" element={<LifeInDotsPage />} />
+          <Route path="/detach-app-blocker-facts" element={<FactsPage />} />
+          <Route path="/nfc-app-blocker" element={<NfcAppBlocker />} />
+          <Route path="/brick-alternative" element={<BrickAlternative />} />
+          <Route path="/detach-vs-brick" element={<DetachVsBrick />} />
+          <Route path="/how-nfc-focus-apps-work" element={<HowNfcFocusAppsWork />} />
+          <Route path="/compare" element={<Compare />} />
+          <Route path="/detach-faq" element={<DetachFaq />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;
