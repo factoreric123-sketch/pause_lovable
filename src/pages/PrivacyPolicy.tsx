@@ -1,139 +1,79 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { setCanonical, resetCanonical, setSocialMeta, resetSocialMeta } from "@/lib/canonical";
+import Footer from "@/components/pause/Footer";
+import { setCanonical, setSocialMeta } from "@/lib/canonical";
+import { SITE } from "@/config/site";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
     setCanonical("/privacy-policy");
     setSocialMeta({
-      title: "Privacy Policy | Detach",
-      description:
-        "How Detach handles data: no account required, local-first design, and what we collect when you use our app or order a Detach card.",
+      title: `Privacy Policy | ${SITE.name}`,
+      description: `How ${SITE.name} handles your information.`,
       path: "/privacy-policy",
-      type: "website",
     });
-    return () => {
-      resetCanonical();
-      resetSocialMeta();
-    };
   }, []);
 
   return (
-    <div className="min-h-screen bg-background px-6 py-16">
-      <div className="max-w-3xl mx-auto">
-        <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8">
-          <ArrowLeft className="w-4 h-4" />
-          Back to home
+    <div className="min-h-screen bg-background">
+      <main className="mx-auto max-w-2xl px-6 pb-20 pt-24">
+        <Link
+          to="/"
+          className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <ArrowLeft className="h-4 w-4" /> Back to home
         </Link>
+        <h1 className="font-display text-4xl font-extrabold tracking-tight">Privacy Policy</h1>
+        <p className="mt-2 text-sm text-muted-foreground">Last updated: {new Date().getFullYear()}</p>
 
-        <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-        <p className="text-muted-foreground mb-6">Last updated: March 4, 2026</p>
+        <div className="legal-content mt-8">
+          <h2>Overview</h2>
+          <p>
+            {SITE.name} helps you create rules for the apps you want to use less. This policy explains what we do with
+            information connected to the app and this website.
+          </p>
 
-        <div className="space-y-8 text-secondary-foreground leading-relaxed">
-          <section>
-            <h2 className="text-xl font-bold mb-3">Overview</h2>
-            <p className="text-muted-foreground">
-              Detach is built to minimize data collection. Most app data stays on your device.
-              We only send limited NFC verification data required to confirm whether a scanned tag is an authorized Detach tag.
-            </p>
-          </section>
+          <h2>Your rules</h2>
+          <p>
+            The rules you create describe how you want to use your own phone. We treat them as personal information and
+            do not sell them or share them with advertisers.
+          </p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3">Data We Collect</h2>
-            <p className="text-muted-foreground mb-3">
-              We do not require account creation, email, or profile information.
-            </p>
-            <p className="text-muted-foreground mb-2">We process:</p>
-            <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-2">
-              <li>NFC tag identifier (serial/UID or tag code) when you scan a tag</li>
-              <li>Basic request metadata needed for service operation/security (for example, request timing and technical logs)</li>
-            </ul>
-          </section>
+          <h2>Information you give us</h2>
+          <p>
+            If you contact us through the form on this site, we receive your name, email address and message so we can
+            reply. We use it for support only.
+          </p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3">Data Stored On Device</h2>
-            <p className="text-muted-foreground mb-2">Detach stores locally on your device:</p>
-            <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-2">
-              <li>Focus session history</li>
-              <li>Blocking preferences</li>
-              <li>Activity statistics</li>
-              <li>Mode and schedule settings</li>
-            </ul>
-          </section>
+          <h2>Analytics</h2>
+          <p>
+            We may collect aggregate, non-identifying usage information to understand how the website and app are used
+            and to fix problems.
+          </p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3">Screen Time / Family Controls</h2>
-            <p className="text-muted-foreground">
-              Detach uses Apple's Family Controls / Screen Time frameworks to apply blocking rules.
-              This data is managed through Apple's system frameworks and your device permissions.
-            </p>
-          </section>
+          <h2>Third parties</h2>
+          <p>
+            The app is distributed through the Apple App Store. Apple's own privacy terms apply to your download and any
+            purchase made through Apple.
+          </p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3">NFC Verification</h2>
-            <p className="text-muted-foreground">
-              When you scan a tag, Detach sends the tag identifier to our verification backend to check if the tag is authorized.
-              If the tag is authorized, the requested action (start/end) proceeds. If not, it is denied.
-            </p>
-          </section>
+          <h2>Your choices</h2>
+          <p>
+            You can ask us to delete any information you have sent us by emailing{" "}
+            <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+          </p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3">Analytics & Tracking</h2>
-            <p className="text-muted-foreground">
-              Detach does not use advertising SDKs.
-              Detach does not use third-party behavioral tracking across apps/websites.
-            </p>
-          </section>
+          <h2>Changes</h2>
+          <p>If this policy changes, the updated version will be posted on this page.</p>
 
-          <section>
-            <h2 className="text-xl font-bold mb-3">Third-Party Services</h2>
-            <p className="text-muted-foreground">
-              Detach uses a backend service for NFC tag authorization storage and verification.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold mb-3">Data Retention</h2>
-            <p className="text-muted-foreground mb-2">
-              On-device focus/session/settings data remains on your device until you delete it or remove the app.
-            </p>
-            <p className="text-muted-foreground">
-              Server-side tag authorization records are retained as needed to operate and secure tag verification.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold mb-3">Your Choices</h2>
-            <p className="text-muted-foreground">
-              You can stop NFC verification by not using tag-based actions and can remove the app at any time.
-              You may contact us to request deletion of server-side data where applicable.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold mb-3">Children</h2>
-            <p className="text-muted-foreground">
-              This app is intended for a general audience and is not directed to children.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold mb-3">Changes to This Policy</h2>
-            <p className="text-muted-foreground">
-              We may update this policy from time to time. We will update the "Last updated" date when changes are made.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold mb-3">Contact</h2>
-            <p className="text-muted-foreground">
-              If you have questions about this Privacy Policy, please{" "}
-              <Link to="/contact" className="text-primary hover:underline">contact us</Link>.
-            </p>
-          </section>
+          <h2>Contact</h2>
+          <p>
+            Questions? Email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+          </p>
         </div>
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 };

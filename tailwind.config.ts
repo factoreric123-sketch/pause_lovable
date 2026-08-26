@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Nunito", "sans-serif"],
+        sans: ["Figtree", "system-ui", "sans-serif"],
+        display: ["Outfit", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -22,6 +23,14 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        app: {
+          bg: "hsl(var(--app-bg))",
+          surface: "hsl(var(--app-surface))",
+          fg: "hsl(var(--app-fg))",
+          muted: "hsl(var(--app-muted))",
+          line: "hsl(var(--app-line))",
+          green: "hsl(var(--app-green))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

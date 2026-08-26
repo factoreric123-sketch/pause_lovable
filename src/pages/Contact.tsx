@@ -13,12 +13,12 @@ const Contact = () => {
   useEffect(() => {
     setCanonical("/contact");
     setSocialMeta({
-      title: "Contact Us | Detach",
-      description:
-        "Get in touch with the Detach team for support, partnerships, or questions about the app and Detach card.",
+      title: "Contact | Pause",
+      description: "Get in touch with the Pause team for support, feedback or questions about the app.",
       path: "/contact",
       type: "website",
     });
+
     return () => {
       resetCanonical();
       resetSocialMeta();
