@@ -20,7 +20,7 @@ const Footer = () => (
             className="mt-5 inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
           >
             <AppleGlyph className="h-4 w-4" />
-            Download
+            {SITE.ctaLabel}
           </a>
         </div>
 
@@ -28,7 +28,7 @@ const Footer = () => (
           <h3 className="text-sm font-semibold">Product</h3>
           <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
             <li><Link to="/#features" className="transition-colors hover:text-foreground">Features</Link></li>
-            <li><Link to="/#insights" className="transition-colors hover:text-foreground">Insights</Link></li>
+            <li><Link to="/#strict-mode" className="transition-colors hover:text-foreground">Strict Mode</Link></li>
             <li><Link to="/#how-it-works" className="transition-colors hover:text-foreground">How It Works</Link></li>
             <li><Link to="/#faq" className="transition-colors hover:text-foreground">FAQ</Link></li>
           </ul>

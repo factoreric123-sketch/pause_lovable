@@ -15,7 +15,7 @@ const controls = [
 ];
 
 const HardMode = () => (
-  <section className="border-t border-border/60 px-6 py-24">
+  <section id="strict-mode" className="scroll-mt-20 border-t border-border/60 px-6 py-16 md:py-20">
     <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:items-center">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <span className="section-label">Strict protections</span>

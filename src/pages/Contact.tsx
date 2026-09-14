@@ -66,7 +66,7 @@ const Contact = () => {
           <h1 className="text-3xl font-bold">Contact Us</h1>
         </div>
         <p className="text-muted-foreground mb-8">
-          Have a question or feedback? Fill out the form below and we'll get back to you.
+          Pause is coming to iPhone. Ask about launch, share feedback, or get in touch with the team.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">

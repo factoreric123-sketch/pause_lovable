@@ -25,9 +25,9 @@ const FinalCta = () => (
           href={SITE.appStoreUrl}
           className="rounded-full bg-accent px-8 py-4 font-semibold text-accent-foreground transition-transform hover:-translate-y-0.5"
         >
-          Get Pause Free
+          {SITE.ctaLabel}
         </a>
-        <p className="text-sm text-muted-foreground">Available on iPhone.</p>
+        <p className="text-sm text-muted-foreground">Coming to iPhone. Contact us with launch questions.</p>
       </div>
     </motion.div>
   </section>

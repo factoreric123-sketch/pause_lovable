@@ -8,7 +8,7 @@ import { SITE } from "@/config/site";
 const links = [
   { label: "How It Works", to: "/#how-it-works" },
   { label: "Features", to: "/#features" },
-  { label: "Insights", to: "/#insights" },
+  { label: "Strict Mode", to: "/#strict-mode" },
   { label: "FAQ", to: "/#faq" },
 ];
 
@@ -44,14 +44,16 @@ const Navbar = () => {
             href={SITE.appStoreUrl}
             className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
           >
-            Get Pause Free
+            {SITE.ctaLabel}
           </a>
         </div>
 
         <button
-          className="text-muted-foreground transition-colors hover:text-foreground md:hidden"
+          className="flex h-11 w-11 items-center justify-center text-muted-foreground transition-colors hover:text-foreground md:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -60,6 +62,7 @@ const Navbar = () => {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -81,7 +84,7 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
                 className="mt-3 block rounded-full bg-accent px-5 py-3 text-center text-sm font-semibold text-accent-foreground"
               >
-                Get Pause Free
+                {SITE.ctaLabel}
               </a>
             </div>
           </motion.div>

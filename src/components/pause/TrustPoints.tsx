@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { BadgeCheck, CircleOff, Smartphone, UserRoundX } from "lucide-react";
 
 const points = [
-  { icon: BadgeCheck, label: "Free right now" },
+  { icon: BadgeCheck, label: "Coming to iPhone" },
   { icon: UserRoundX, label: "No account" },
   { icon: CircleOff, label: "No ads" },
   { icon: Smartphone, label: "Your block lists stay on your phone" },

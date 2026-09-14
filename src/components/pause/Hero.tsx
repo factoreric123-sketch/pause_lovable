@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import PhoneFrame from "./PhoneFrame";
-import { BlockScreen } from "./AppScreens";
+import rulesImage from "@/assets/app-rules.png";
 import { SITE } from "@/config/site";
 
 const Hero = () => (
-  <section className="relative overflow-hidden px-6 pb-20 pt-32 md:pb-28 md:pt-40">
+  <section className="relative overflow-hidden px-6 pb-12 pt-24">
     <div
       className="pointer-events-none absolute inset-x-0 -top-40 h-[500px]"
       style={{ background: "radial-gradient(ellipse 50% 60% at 50% 40%, hsl(var(--accent) / 0.12), transparent 70%)" }}
@@ -16,20 +15,20 @@ const Hero = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <span className="section-label">Strict by design</span>
+        <span className="section-label">Coming to iPhone</span>
         <h1 className="mt-4 font-display text-[clamp(2.8rem,6vw,4.5rem)] font-extrabold leading-[0.98] tracking-tight">
-          Put down the phone.<br />
-          <span className="text-mint-gradient">For real this time.</span>
+          Pause.<br />
+          <span className="text-mint-gradient">Your phone, on your terms.</span>
         </h1>
         <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
-          Pause blocks distracting apps and websites on your terms. Set focus sessions, daily limits, or a challenge before opening. Use Strict Mode to help your plan stick.
+          Block distracting apps, limit daily use, and decide when access returns. Make room for what you meant to do.
         </p>
         <div className="mt-9 flex flex-wrap items-center gap-3">
           <a
             href={SITE.appStoreUrl}
             className="rounded-full bg-accent px-7 py-3.5 font-semibold text-accent-foreground transition-transform hover:-translate-y-0.5"
           >
-            Get Pause Free
+            {SITE.ctaLabel}
           </a>
           <a
             href="#how-it-works"
@@ -38,7 +37,7 @@ const Hero = () => (
             See How It Works
           </a>
         </div>
-        <p className="mt-5 text-sm text-muted-foreground">Free on iPhone. No account required.</p>
+        <p className="mt-5 text-sm text-muted-foreground">In development for iPhone. No account required in the app.</p>
       </motion.div>
 
       <motion.div
@@ -46,9 +45,7 @@ const Hero = () => (
         animate={{ opacity: 1, y: 0, rotate: 0 }}
         transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
       >
-        <PhoneFrame label="iPhone showing a Pause block screen">
-          <BlockScreen />
-        </PhoneFrame>
+        <img src={rulesImage} alt="Pause Rules screen with a morning schedule, Friction Lock, a daily time limit, and a Focus App List" width={1170} height={2532} className="mx-auto block h-auto w-full max-w-[260px] rounded-[2rem]" />
       </motion.div>
     </div>
   </section>
