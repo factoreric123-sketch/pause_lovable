@@ -5,94 +5,9 @@
 // src/lib/mcp/index.ts
 import { defineMcp } from "npm:@lovable.dev/mcp-js@0.24.0";
 
-// src/lib/mcp/tools/list-blog-posts.ts
-import { createClient } from "npm:@supabase/supabase-js@^2.100.1";
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.24.0";
-import { z } from "npm:zod@^3.25.76";
-var list_blog_posts_default = defineTool({
-  name: "list_blog_posts",
-  title: "List blog posts",
-  description: "List recent Detach blog posts (title, slug, excerpt, url, published date). Sorted newest first.",
-  inputSchema: {
-    limit: z.number().int().min(1).max(50).optional().describe("Max number of posts to return (default 20).")
-  },
-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ limit }) => {
-    const supabase = createClient(
-      process.env.SUPABASE_URL,
-      process.env.SUPABASE_PUBLISHABLE_KEY,
-      { auth: { persistSession: false, autoRefreshToken: false } }
-    );
-    const { data, error } = await supabase.from("blog_posts_cms").select("slug,title,excerpt,meta_description,published_at,hero_image_url").order("published_at", { ascending: false }).limit(limit ?? 20);
-    if (error) {
-      return { content: [{ type: "text", text: `Error: ${error.message}` }], isError: true };
-    }
-    const posts = (data ?? []).map((p) => ({
-      slug: p.slug,
-      title: p.title,
-      excerpt: p.excerpt ?? p.meta_description ?? "",
-      hero_image_url: p.hero_image_url ?? null,
-      published_at: p.published_at,
-      url: `https://getdetach.app/blog/${p.slug}`
-    }));
-    return {
-      content: [{ type: "text", text: JSON.stringify(posts, null, 2) }],
-      structuredContent: { posts }
-    };
-  }
-});
-
-// src/lib/mcp/tools/get-blog-post.ts
-import { createClient as createClient2 } from "npm:@supabase/supabase-js@^2.100.1";
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.24.0";
-import { z as z2 } from "npm:zod@^3.25.76";
-var get_blog_post_default = defineTool2({
-  name: "get_blog_post",
-  title: "Get blog post",
-  description: "Fetch a single Detach blog post's full content by slug.",
-  inputSchema: {
-    slug: z2.string().min(1).describe("The post slug, e.g. 'brick-vs-one-sec'.")
-  },
-  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: async ({ slug }) => {
-    const supabase = createClient2(
-      process.env.SUPABASE_URL,
-      process.env.SUPABASE_PUBLISHABLE_KEY,
-      { auth: { persistSession: false, autoRefreshToken: false } }
-    );
-    const { data, error } = await supabase.from("blog_posts_cms").select(
-      "slug,title,excerpt,meta_description,content_html,content_markdown,hero_image_url,published_at,keywords"
-    ).eq("slug", slug).maybeSingle();
-    if (error) {
-      return { content: [{ type: "text", text: `Error: ${error.message}` }], isError: true };
-    }
-    if (!data) {
-      return {
-        content: [{ type: "text", text: `No blog post found for slug: ${slug}` }],
-        isError: true
-      };
-    }
-    const post = {
-      slug: data.slug,
-      title: data.title,
-      excerpt: data.excerpt ?? data.meta_description ?? "",
-      content_markdown: data.content_markdown ?? null,
-      content_html: data.content_html ?? null,
-      hero_image_url: data.hero_image_url ?? null,
-      published_at: data.published_at,
-      keywords: data.keywords ?? [],
-      url: `https://getdetach.app/blog/${data.slug}`
-    };
-    return {
-      content: [{ type: "text", text: JSON.stringify(post, null, 2) }],
-      structuredContent: { post }
-    };
-  }
-});
-
 // src/lib/mcp/tools/get-product-info.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.24.0";
-var get_product_info_default = defineTool3({
+import { defineTool } from "npm:@lovable.dev/mcp-js@0.24.0";
+var get_product_info_default = defineTool({
   name: "get_product_info",
   title: "Get product info",
   description: "Return current details about Pause, the free iPhone app and website blocker.",
@@ -119,8 +34,8 @@ var get_product_info_default = defineTool3({
 });
 
 // src/lib/mcp/tools/get-site-links.ts
-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.24.0";
-var get_site_links_default = defineTool4({
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.24.0";
+var get_site_links_default = defineTool2({
   name: "get_site_links",
   title: "Get site links",
   description: "Return the key public URLs on getdetach.app so assistants can link users to the right page.",
@@ -143,11 +58,11 @@ var get_site_links_default = defineTool4({
 
 // src/lib/mcp/index.ts
 var mcp_default = defineMcp({
-  name: "detach-mcp",
-  title: "Detach",
+  name: "pause-mcp",
+  title: "Pause",
   version: "0.1.0",
-  instructions: "Public tools for getdetach.app. Use `get_product_info` for pricing, shipping, and iOS requirements; `list_blog_posts` and `get_blog_post` to browse Detach's blog; `get_site_links` for canonical page URLs.",
-  tools: [list_blog_posts_default, get_blog_post_default, get_product_info_default, get_site_links_default]
+  instructions: "Public tools for getdetach.app. Use `get_product_info` for current Pause features and availability; use `get_site_links` for canonical page URLs.",
+  tools: [get_product_info_default, get_site_links_default]
 });
 
 // lovable-mcp-supabase-entry.ts
