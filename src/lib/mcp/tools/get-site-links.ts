@@ -9,15 +9,10 @@ export default defineTool({
   handler: () => {
     const links = {
       home: "https://getdetach.app/",
-      shop: "https://getdetach.app/shop",
-      about_app: "https://getdetach.app/detach-app",
-      reviews: "https://getdetach.app/reviews",
-      blog: "https://getdetach.app/blog",
-      life_in_dots: "https://getdetach.app/life-in-dots",
       contact: "https://getdetach.app/contact",
       privacy_policy: "https://getdetach.app/privacy-policy",
       terms: "https://getdetach.app/terms",
-      app_store: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+      app_store: null,
     };
     return {
       content: [{ type: "text", text: JSON.stringify(links, null, 2) }],

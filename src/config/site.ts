@@ -2,7 +2,7 @@ export const SITE = {
   name: "Pause",
   tagline: "Use your phone on your terms.",
   description:
-    "Pause is an iPhone app that lets you create simple rules — Session, Schedule, Time Limit and Open Limit — for the apps that distract you.",
+    "Pause is a free iPhone app and website blocker built to make the limits you set harder to undo impulsively.",
   // TODO: replace with the live App Store listing once available.
   appStoreUrl: "#",
   contactEmail: "hello@getdetach.app",
@@ -10,10 +10,10 @@ export const SITE = {
 
 export const RULES = [
   {
-    id: "session",
-    name: "Session",
-    thought: "I don't want this right now.",
-    summary: "Block apps for a set amount of time.",
+    id: "pause",
+    name: "Pause",
+    thought: "Block it now.",
+    summary: "Choose an App List and start blocking immediately.",
   },
   {
     id: "schedule",
@@ -32,5 +32,11 @@ export const RULES = [
     name: "Open Limit",
     thought: "I want to stop checking this constantly.",
     summary: "Limit how many times an app can be opened.",
+  },
+  {
+    id: "friction-lock",
+    name: "Friction Lock",
+    thought: "Make opening it annoying on purpose.",
+    summary: "Complete a challenge before a protected app opens.",
   },
 ] as const;

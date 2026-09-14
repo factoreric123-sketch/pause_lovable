@@ -1,21 +1,24 @@
 import { motion } from "framer-motion";
 
 const cases = [
-  { title: "Focus at work", rule: "Schedule", detail: "Block social apps from 9–5." },
-  { title: "Stop TikTok binges", rule: "Time Limit", detail: "Allow 30 minutes per day." },
-  { title: "Stop checking Instagram", rule: "Open Limit", detail: "Allow 10 opens per day." },
-  { title: "Get through a study session", rule: "Session", detail: "Block distractions for 90 minutes." },
-  { title: "Stop scrolling before bed", rule: "Schedule", detail: "Block social apps starting at 10 PM." },
+  { title: "Social Media", rule: "Apps + websites", detail: "Instagram, TikTok, reddit.com" },
+  { title: "Work", rule: "Apps + websites", detail: "Keep the workday clear of detours." },
+  { title: "Night", rule: "Apps + websites", detail: "Protect the hours before sleep." },
+  { title: "Deep Focus", rule: "Apps + websites", detail: "Put every usual distraction in one place." },
+  { title: "Morning", rule: "Apps + websites", detail: "Start the day before opening the feeds." },
 ];
 
 const UseCases = () => (
   <section className="border-t border-border/60 px-6 py-24 md:py-32">
     <div className="mx-auto max-w-6xl">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-        <span className="section-label">Use cases</span>
+        <span className="section-label">App Lists</span>
         <h2 className="mt-4 max-w-2xl font-display text-[clamp(2.2rem,5vw,3.5rem)] font-extrabold leading-[1.04] tracking-tight">
-          A rule for every distraction.
+          Block the distraction, wherever it hides.
         </h2>
+        <p className="mt-5 max-w-2xl text-lg text-muted-foreground">Create App Lists for different parts of your life. Each one can contain both apps and supported websites.</p>
+        <p className="mt-7 font-display text-2xl font-bold">Reddit in Safari is still Reddit.</p>
+        <p className="mt-3 max-w-2xl text-muted-foreground">Pause can block distracting websites too, so switching from an app to the browser doesn't become an easy workaround.</p>
       </motion.div>
 
       <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

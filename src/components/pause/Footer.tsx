@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import icon from "@/assets/pause-icon.jpg.asset.json";
+import icon from "@/assets/pause-icon.jpg";
 import { SITE } from "@/config/site";
 import { AppleGlyph } from "./AppStoreBadge";
 
@@ -9,25 +9,26 @@ const Footer = () => (
       <div className="grid gap-10 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-2.5">
-            <img src={icon.url} alt="Pause app icon" className="h-8 w-8 rounded-[0.6rem]" />
+            <img src={icon} alt="Pause app icon" className="h-8 w-8 rounded-[0.6rem]" />
             <span className="font-display text-lg font-bold">{SITE.name}</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Simple rules for the apps that distract you. Available on iPhone.
+            Pause helps you protect your attention without turning it into another feed.
           </p>
           <a
             href={SITE.appStoreUrl}
             className="mt-5 inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-semibold transition-colors hover:bg-secondary"
           >
             <AppleGlyph className="h-4 w-4" />
-            App Store
+            Download
           </a>
         </div>
 
         <div>
           <h3 className="text-sm font-semibold">Product</h3>
           <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
-            <li><Link to="/#rules" className="transition-colors hover:text-foreground">Features</Link></li>
+            <li><Link to="/#features" className="transition-colors hover:text-foreground">Features</Link></li>
+            <li><Link to="/#insights" className="transition-colors hover:text-foreground">Insights</Link></li>
             <li><Link to="/#how-it-works" className="transition-colors hover:text-foreground">How It Works</Link></li>
             <li><Link to="/#faq" className="transition-colors hover:text-foreground">FAQ</Link></li>
           </ul>

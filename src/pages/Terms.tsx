@@ -30,8 +30,8 @@ const Terms = () => {
         <div className="legal-content mt-8">
           <h2>Using the app</h2>
           <p>
-            {SITE.name} is an iPhone app that lets you create rules for the apps you choose. You are responsible for the
-            rules you set and for how you use your device.
+            {SITE.name} is an iPhone app that lets you create restrictions for selected apps and websites. You are
+            responsible for the App Lists and limits you set and for how you use your device.
           </p>
 
           <h2>Availability</h2>
@@ -46,10 +46,8 @@ const Terms = () => {
             blocked app, and we are not liable for any outcome of using or not using the app.
           </p>
 
-          <h2>Purchases</h2>
-          <p>
-            Any purchases are handled by Apple. Refunds and billing questions are subject to Apple's App Store policies.
-          </p>
+          <h2>Current availability</h2>
+          <p>Pause is free right now. Features, availability, and pricing may change in the future.</p>
 
           <h2>Intellectual property</h2>
           <p>

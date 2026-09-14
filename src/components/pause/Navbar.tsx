@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import icon from "@/assets/pause-icon.jpg.asset.json";
+import icon from "@/assets/pause-icon.jpg";
 import { SITE } from "@/config/site";
 
 const links = [
   { label: "How It Works", to: "/#how-it-works" },
-  { label: "Rules", to: "/#rules" },
+  { label: "Features", to: "/#features" },
+  { label: "Insights", to: "/#insights" },
   { label: "FAQ", to: "/#faq" },
 ];
 
@@ -29,7 +30,7 @@ const Navbar = () => {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight">
-          <img src={icon.url} alt="Pause app icon" className="h-8 w-8 rounded-[0.6rem]" />
+          <img src={icon} alt="Pause app icon" className="h-8 w-8 rounded-[0.6rem]" />
           {SITE.name}
         </Link>
 
@@ -43,7 +44,7 @@ const Navbar = () => {
             href={SITE.appStoreUrl}
             className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
           >
-            Download for iPhone
+            Get Pause Free
           </a>
         </div>
 
@@ -80,7 +81,7 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
                 className="mt-3 block rounded-full bg-accent px-5 py-3 text-center text-sm font-semibold text-accent-foreground"
               >
-                Download for iPhone
+                Get Pause Free
               </a>
             </div>
           </motion.div>

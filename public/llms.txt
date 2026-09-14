@@ -1,12 +1,15 @@
 # Pause
 
-> Pause is an iPhone app that helps you use your phone on your terms by turning intentions into rules.
+> Pause is a free iPhone app and website blocker designed to make self-imposed limits harder to undo impulsively.
 
-## The four rules
-- Session: block chosen apps for a set amount of time, starting now.
-- Schedule: block chosen apps automatically between set times on set days.
-- Time Limit: allow a set number of minutes per day, then block the app.
-- Open Limit: allow a set number of opens per day, with an optional length per open.
+## The five blocking methods
+- Pause: block an App List immediately for a chosen duration.
+- Schedule: block an App List automatically between set times on set days.
+- Time Limit: allow a set number of minutes per day, then block the App List.
+- Open Limit: allow a set number of opens per day.
+- Friction Lock: require one or more challenges before a protected app opens.
+
+An App List is a group of selected apps and supported websites. Pause requires no account, shows no ads, and is free right now.
 
 ## Pages
 - Home: https://getdetach.app/

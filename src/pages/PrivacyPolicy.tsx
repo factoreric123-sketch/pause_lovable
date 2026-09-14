@@ -30,14 +30,14 @@ const PrivacyPolicy = () => {
         <div className="legal-content mt-8">
           <h2>Overview</h2>
           <p>
-            {SITE.name} helps you create rules for the apps you want to use less. This policy explains what we do with
-            information connected to the app and this website.
+            {SITE.name} helps you block distracting apps and websites. This policy explains what stays on your device
+            and the limited information connected to the app and this website.
           </p>
 
-          <h2>Your rules</h2>
+          <h2>Your blocking data</h2>
           <p>
-            The rules you create describe how you want to use your own phone. We treat them as personal information and
-            do not sell them or share them with advertisers.
+            Your App Lists, schedules, and Pause session history remain on your device. Pause does not require an account
+            and does not show ads.
           </p>
 
           <h2>Information you give us</h2>
@@ -48,14 +48,14 @@ const PrivacyPolicy = () => {
 
           <h2>Analytics</h2>
           <p>
-            We may collect aggregate, non-identifying usage information to understand how the website and app are used
-            and to fix problems.
+            Pause sends one anonymous daily usage ping so we can understand approximately how many people actively use
+            the app. This does not include your App Lists, schedules, or Pause session history.
           </p>
 
           <h2>Third parties</h2>
           <p>
-            The app is distributed through the Apple App Store. Apple's own privacy terms apply to your download and any
-            purchase made through Apple.
+            The app is distributed through the Apple App Store and uses Apple's Screen Time APIs to apply the restrictions
+            you create. Apple's own privacy terms apply to your download and use of those technologies.
           </p>
 
           <h2>Your choices</h2>

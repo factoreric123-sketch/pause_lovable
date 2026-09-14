@@ -13,7 +13,13 @@ import PrivacySection from "@/components/pause/PrivacySection";
 import Faq, { faqs } from "@/components/pause/Faq";
 import FinalCta from "@/components/pause/FinalCta";
 import Footer from "@/components/pause/Footer";
-import { SessionScreen, ScheduleScreen, TimeLimitScreen, OpenLimitScreen } from "@/components/pause/AppScreens";
+import TrustPoints from "@/components/pause/TrustPoints";
+import Insights from "@/components/pause/Insights";
+import TimeCalculator from "@/components/pause/TimeCalculator";
+import Shortcuts from "@/components/pause/Shortcuts";
+import Comparison from "@/components/pause/Comparison";
+import FreeCta from "@/components/pause/FreeCta";
+import { PauseScreen, ScheduleScreen, TimeLimitScreen, OpenLimitScreen, FrictionLockScreen } from "@/components/pause/AppScreens";
 import { setCanonical } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 
@@ -26,6 +32,7 @@ const schema = {
       applicationCategory: "LifestyleApplication",
       operatingSystem: "iOS",
       description: SITE.description,
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     },
     {
       "@type": "FAQPage",
@@ -54,25 +61,18 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
+        <TrustPoints />
         <CoreIdea />
+        <RulesOverview />
 
         <RuleSection
-          id="session"
+          id="pause"
           index={1}
-          ruleName="Session"
-          headline="Block it for now."
-          copy="Choose the apps you want blocked and start a session for a set amount of time."
-          example={{ title: "45 minutes", lines: ["Instagram", "TikTok", "YouTube"] }}
-          listTitle="Perfect for"
-          list={[
-            "Studying",
-            "Working",
-            "Reading",
-            "Going to the gym",
-            "Spending time with friends",
-            "Anytime you want your phone to stop being a distraction",
-          ]}
-          screen={<SessionScreen />}
+          ruleName="Pause"
+          headline="Block it now."
+          copy="Choose an App List and start blocking immediately for however long you need."
+          example={{ title: "Immediate blocking", lines: ["Choose your duration", "Apps and websites", "A limited break when needed"] }}
+          screen={<PauseScreen />}
         />
 
         <RuleSection
@@ -80,11 +80,9 @@ const Index = () => {
           index={2}
           ruleName="Schedule"
           headline="Make distraction-free time automatic."
-          copy="Choose when apps should be blocked and the rule runs automatically on the days you select."
-          example={{ title: "Weekdays · 5:00 PM → 10:00 PM", lines: ["Instagram", "TikTok", "Reddit"] }}
-          listTitle="Common schedules"
-          list={["Work · 9 AM – 5 PM", "Morning · Wake up – 9 AM", "Wind Down · 10 PM – Morning"]}
-          footnote="Set it once. Let it happen automatically."
+          copy="Create recurring blocking windows for specific days and times."
+          example={{ title: "Monday–Friday", lines: ["9:00 AM–12:00 PM", "Social Media"] }}
+          footnote="Set it once. Pause handles the rest."
           screen={<ScheduleScreen />}
           reverse
         />
@@ -93,10 +91,9 @@ const Index = () => {
           id="time-limit"
           index={3}
           ruleName="Time Limit"
-          headline="Enjoy it. Just not all day."
-          copy="Choose how much time you're willing to spend in an app each day. Once you've used your allowance, the app gets blocked."
-          example={{ title: "Instagram · 45 minutes per day", lines: ["Then blocked until tomorrow"] }}
-          footnote="You don't have to delete it. Just give it a limit."
+          headline="Give yourself a daily budget."
+          copy="Set a maximum amount of time for distracting apps each day. Once that time is used, the apps stay blocked until the daily limit resets."
+          example={{ title: "Social Media · 45 minutes", lines: ["Blocked after the budget is used"] }}
           screen={<TimeLimitScreen />}
         />
 
@@ -104,22 +101,35 @@ const Index = () => {
           id="open-limit"
           index={4}
           ruleName="Open Limit"
-          headline="Stop checking without thinking."
-          copy="Limit how many times you can open an app each day, and how long each open lasts."
-          example={{ title: "Instagram · 10 opens per day", lines: ["5 minutes per open"] }}
-          listTitle="Built for the apps you check on autopilot"
-          list={["Instagram", "Reddit", "X", "Email", "News"]}
-          footnote="Make every open intentional."
+          headline="Sometimes the problem isn't time. It's checking."
+          copy="Limit how many times you can open distracting apps each day, even when each individual visit is short."
+          example={{ title: "Instagram", lines: ["3 opens per day", "2 remaining"] }}
+          footnote="Stop compulsive checking before it turns into a scroll."
           screen={<OpenLimitScreen />}
           reverse
         />
 
-        <RulesOverview />
+        <RuleSection
+          id="friction-lock"
+          index={5}
+          ruleName="Friction Lock"
+          headline="Your impulse has to earn its way in."
+          copy="Friction Lock adds intentional friction before distracting apps open. Solve a math problem or retype a randomly generated 20-character password correctly before continuing. A wrong math answer gives you a fresh problem."
+          example={{ title: "Want even more friction?", lines: ["Require 1–10 correct challenges in a row"] }}
+          footnote="No mindless tapping. You have to consciously decide the app is worth it."
+          screen={<FrictionLockScreen />}
+        />
+
+        <UseCases />
         <HardMode />
         <WhyItWorks />
-        <UseCases />
         <ScreenshotShowcase />
+        <Insights />
+        <TimeCalculator />
+        <Shortcuts />
         <PrivacySection />
+        <Comparison />
+        <FreeCta />
         <Faq />
         <FinalCta />
       </main>
