@@ -95,20 +95,21 @@ import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.24.0";
 var get_product_info_default = defineTool3({
   name: "get_product_info",
   title: "Get product info",
-  description: "Return details about the Detach card and companion iOS app: price, shipping, requirements, and purchase / App Store links.",
+  description: "Return current details about Pause, the free iPhone app and website blocker.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const info = {
-      name: "Detach",
-      tagline: "A physical card that helps you take breaks from your phone.",
-      price_usd: 9.99,
-      shipping: "Free worldwide shipping.",
-      requirements: "Requires iOS 17 or later. iPhone only.",
-      shop_url: "https://getdetach.app/shop",
-      app_store_url: "https://apps.apple.com/us/app/detach-screen-break/id6759267252",
+      name: "Pause",
+      tagline: "A strict app and website blocker built to make your limits harder to undo impulsively.",
+      price: "Free right now",
+      platform: "iPhone only",
+      account_required: false,
+      ads: false,
+      blocking_methods: ["Pause", "Schedule", "Time Limit", "Open Limit", "Friction Lock"],
+      app_store_url: null,
       website: "https://getdetach.app",
-      support_email: "getdetach@gmail.com"
+      support_email: "hello@getdetach.app"
     };
     return {
       content: [{ type: "text", text: JSON.stringify(info, null, 2) }],
@@ -128,15 +129,10 @@ var get_site_links_default = defineTool4({
   handler: () => {
     const links = {
       home: "https://getdetach.app/",
-      shop: "https://getdetach.app/shop",
-      about_app: "https://getdetach.app/detach-app",
-      reviews: "https://getdetach.app/reviews",
-      blog: "https://getdetach.app/blog",
-      life_in_dots: "https://getdetach.app/life-in-dots",
       contact: "https://getdetach.app/contact",
       privacy_policy: "https://getdetach.app/privacy-policy",
       terms: "https://getdetach.app/terms",
-      app_store: "https://apps.apple.com/us/app/detach-screen-break/id6759267252"
+      app_store: null
     };
     return {
       content: [{ type: "text", text: JSON.stringify(links, null, 2) }],
