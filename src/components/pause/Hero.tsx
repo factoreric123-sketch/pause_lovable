@@ -22,7 +22,7 @@ const Hero = () => (
           <span className="text-mint-gradient">For real this time.</span>
         </h1>
         <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
-          Pause blocks distracting apps and websites, and makes your limits harder to undo when your willpower disappears.
+          Pause blocks distracting apps and websites on your terms. Set focus sessions, daily limits, or a challenge before opening. Use Strict Mode to help your plan stick.
         </p>
         <div className="mt-9 flex flex-wrap items-center gap-3">
           <a

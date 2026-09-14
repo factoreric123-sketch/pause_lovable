@@ -28,13 +28,13 @@ export const faqs = [
   },
   {
     q: "Can I get out of a block in an emergency?",
-    a: "Yes. Pause includes configurable Emergency Exits so you have a genuine escape hatch when you really need one. Those exits can be limited instead of functioning as an unlimited skip button.",
+    a: "Emergency recovery is separate from ordinary unlocks. Turning unlocks off removes regular breaks and early exits from a session; it does not remove emergency recovery.",
   },
   {
     q: "Does Pause collect my data?",
     a: "Your App Lists, schedules, and Pause session history remain on your device. Pause does not require an account and does not show ads. It sends a minimal anonymous daily usage ping so we can understand overall active usage.",
   },
-  { q: "Can I block Instagram but still receive calls?", a: "Yes. Pause targets the apps and websites you choose rather than disabling your entire phone." },
+  { q: "What's the difference between unlocks and Strict Mode?", a: "Unlocks determine whether you can take ordinary breaks or leave a session early. Strict Mode locks session editing and App List changes until the session ends. Choose both before you start." },
 ];
 
 const Faq = () => (

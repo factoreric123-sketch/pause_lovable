@@ -2,20 +2,20 @@ import { motion } from "framer-motion";
 import { Clock3, ListPlus } from "lucide-react";
 
 const flow = [
-  { icon: Clock3, label: "Changing the rules takes work.", copy: "Wait 30 seconds, then type “I choose to change my plan” before changing an active rule." },
-  { icon: ListPlus, label: "Your rules can get stricter. Not weaker.", copy: "Add apps during an active block, but don't quietly remove protected apps from the App List." },
+  { icon: Clock3, label: "Choose when access returns.", copy: "Set a session duration, a daily limit, or a timed unlock before you need it." },
+  { icon: ListPlus, label: "Keep your app choices in place.", copy: "Strict Mode locks App List changes until your session ends." },
 ];
 
 const WhyItWorks = () => (
   <section className="border-t border-border/60 px-6 py-24 md:py-32">
     <div className="mx-auto max-w-4xl text-center">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-        <span className="section-label">Anti-weasel protections</span>
+        <span className="section-label">Follow through</span>
         <h2 className="mt-4 font-display text-[clamp(2.2rem,5vw,3.5rem)] font-extrabold leading-[1.04] tracking-tight">
-          Pause knows the tricks you'll try.
+          Give your plan a chance to stick.
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-          Thirty seconds is a long time when you're making an impulsive decision. Pause protects the plan you made before the urge arrived.
+          Make the decision once, before the urge to check. Pause applies the limits you chose while you get on with your day.
         </p>
       </motion.div>
 

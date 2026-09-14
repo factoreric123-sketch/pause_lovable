@@ -4,13 +4,13 @@ import { DoorOpen, ShieldCheck } from "lucide-react";
 const controls = [
   {
     icon: DoorOpen,
-    name: "Emergency Exits",
-    copy: "Choose a limited number of exits and control how slowly they refill. For example: 2 Emergency Exits, with the next exit replenishing in 7 days.",
+    name: "Unlocks",
+    copy: "Choose whether to allow unlocks before starting a session. With unlocks off, there are no ordinary breaks or early exits. Emergency recovery is separate.",
   },
   {
     icon: ShieldCheck,
     name: "Strict Mode",
-    copy: "Adds protection against disabling your own system, including deleting Pause while restrictions are active.",
+    copy: "Locks session editing and App List changes until the session ends, so the plan you set stays in place.",
   },
 ];
 
@@ -20,12 +20,12 @@ const HardMode = () => (
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <span className="section-label">Strict protections</span>
         <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-extrabold leading-[1.04] tracking-tight">
-          A blocker shouldn't come with an unlimited quit button.
+          Decide your limits before you start.
         </h2>
         <p className="mt-5 max-w-md text-lg leading-relaxed text-muted-foreground">
-          Pause gives you a way out when you genuinely need one, without turning that escape hatch into another habit.
+          Choose whether you can take a break, then turn on Strict Mode to lock editing until your session ends.
         </p>
-        <p className="mt-6 font-display text-xl font-bold">An escape hatch you can use twice. Not twice an hour.</p>
+        <p className="mt-6 font-display text-xl font-bold">Your session. Your rules. Set in advance.</p>
       </motion.div>
 
       <div className="space-y-4">

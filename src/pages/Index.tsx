@@ -68,10 +68,10 @@ const Index = () => {
         <RuleSection
           id="pause"
           index={1}
-          ruleName="Pause"
+          ruleName="Session"
           headline="Block it now."
-          copy="Choose an App List and start blocking immediately for however long you need."
-          example={{ title: "Immediate blocking", lines: ["Choose your duration", "Apps and websites", "A limited break when needed"] }}
+          copy="Choose an App List and start a session. Block for a set time or leave it running until you end it. Decide whether to allow unlocks before you start."
+          example={{ title: "Focus for 50 minutes", lines: ["Choose your apps", "Set your duration", "Choose whether to allow unlocks"] }}
           screen={<PauseScreen />}
         />
 
@@ -101,10 +101,10 @@ const Index = () => {
           id="open-limit"
           index={4}
           ruleName="Open Limit"
-          headline="Sometimes the problem isn't time. It's checking."
-          copy="Limit how many times you can open distracting apps each day, even when each individual visit is short."
-          example={{ title: "Instagram", lines: ["3 opens per day", "2 remaining"] }}
-          footnote="Stop compulsive checking before it turns into a scroll."
+          headline="Give every check a limit."
+          copy="Set a daily number of opens for your selected apps. Each open gives you a timed pass that keeps counting down even after you close the apps. Once your passes are used, access stays blocked until tomorrow."
+          example={{ title: "Instagram", lines: ["3 opens per day", "5 minutes per open"] }}
+          footnote="Set the pass length in advance, or choose it each time."
           screen={<OpenLimitScreen />}
           reverse
         />
@@ -113,10 +113,10 @@ const Index = () => {
           id="friction-lock"
           index={5}
           ruleName="Friction Lock"
-          headline="Your impulse has to earn its way in."
-          copy="Friction Lock adds intentional friction before distracting apps open. Solve a math problem or retype a randomly generated 20-character password correctly before continuing. A wrong math answer gives you a fresh problem."
-          example={{ title: "Want even more friction?", lines: ["Require 1–10 correct challenges in a row"] }}
-          footnote="No mindless tapping. You have to consciously decide the app is worth it."
+          headline="A moment to reconsider."
+          copy="Solve a math problem or type a long password to unlock your selected apps. Choose how many challenges to complete in a row and how long access lasts. The countdown continues even when the apps are closed."
+          example={{ title: "Pause before opening", lines: ["Complete a challenge", "Unlock for 5 minutes"] }}
+          footnote="Set the unlock duration, or choose it each time."
           screen={<FrictionLockScreen />}
         />
 

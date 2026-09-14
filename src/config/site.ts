@@ -11,9 +11,9 @@ export const SITE = {
 export const RULES = [
   {
     id: "pause",
-    name: "Pause",
+    name: "Session",
     thought: "Block it now.",
-    summary: "Choose an App List and start blocking immediately.",
+    summary: "Block now for a set time or until you end the session.",
   },
   {
     id: "schedule",
@@ -31,12 +31,12 @@ export const RULES = [
     id: "open-limit",
     name: "Open Limit",
     thought: "I want to stop checking this constantly.",
-    summary: "Limit how many times an app can be opened.",
+    summary: "Set a daily number of timed passes for your apps.",
   },
   {
     id: "friction-lock",
     name: "Friction Lock",
-    thought: "Make opening it annoying on purpose.",
-    summary: "Complete a challenge before a protected app opens.",
+    thought: "Give me a moment to reconsider.",
+    summary: "Complete a challenge to unlock your apps for a limited time.",
   },
 ] as const;

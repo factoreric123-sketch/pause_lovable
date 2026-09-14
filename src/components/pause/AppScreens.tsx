@@ -40,7 +40,7 @@ export const RulesScreen = () => (
     <Title sub="5 protections active">Your App Lists</Title>
     <div className="space-y-3">
       {[
-        { name: "Deep Work", type: "Pause", detail: "45 min · 3 apps + 2 websites" },
+        { name: "Deep Work", type: "Session", detail: "45 min · 3 apps + 2 websites" },
         { name: "Evenings", type: "Schedule", detail: "Weekdays · 5:00 PM–10:00 PM" },
         { name: "TikTok", type: "Time Limit", detail: "45 min per day" },
         { name: "Instagram", type: "Open Limit", detail: "3 opens per day" },
@@ -68,7 +68,7 @@ export const BlockScreen = ({ quote = "Not everything deserves your attention." 
 
 export const PauseScreen = () => (
   <div>
-    <Title sub="Block immediately">Pause</Title>
+    <Title sub="Block immediately">Session</Title>
     <Card className="text-center">
       <p className="font-display text-5xl font-extrabold tracking-tight">45:00</p>
       <p className="mt-1 text-xs text-app-muted">minutes</p>
@@ -155,7 +155,7 @@ export const InsightsScreen = ({ period = "Week" }: { period?: string }) => {
 };
 
 export const SCREENS = [
-  { id: "pause", label: "Pause", Screen: PauseScreen },
+  { id: "pause", label: "Session", Screen: PauseScreen },
   { id: "schedule", label: "Schedule", Screen: ScheduleScreen },
   { id: "time-limit", label: "Time Limit", Screen: TimeLimitScreen },
   { id: "open-limit", label: "Open Limit", Screen: OpenLimitScreen },
