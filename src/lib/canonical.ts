@@ -37,9 +37,9 @@ const setMeta = (selector: string, attr: "name" | "property", key: string, conte
 };
 
 const DEFAULTS = {
-  title: "Pause – Screen Time Rules for iPhone",
+  title: "Pause – Strict App & Website Blocker for iPhone",
   description:
-    "Four simple rules for the apps that distract you: Session, Schedule, Time Limit and Open Limit.",
+    "Pause blocks distracting apps and websites, with strict protections that make your limits harder to undo impulsively.",
   type: "website" as const,
   url: `${SITE}/`,
 };
