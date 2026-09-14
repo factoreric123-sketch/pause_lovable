@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+# Pause
 
-## Project info
+Build a landing page for "Detach" — an iOS digital wellness app that helps users reduce screen time by blocking distracting apps and websites during focus sessions. Users tap a physical NFC tag to start and end sessions, creating intentional friction to stay off their phone.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Key features to highlight:
 
-## How can I edit this code?
+Block apps & websites using Apple Screen Time
+Start/end sessions by tapping an NFC tag
+Create custom blocking modes (different app/website combos)
+Schedule recurring focus sessions
+Strict Mode prevents circumventing by deleting the app
+Emergency overrides for genuine emergencies (limited uses)
+Activity tracking with weekly/daily stats
+100% local & private — no account, no data leaves your device
+Design direction:
 
-There are several ways of editing your application.
+Clean, minimal, modern
+Dark theme with near-black background (#141416)
+Blue accent color (#3A7BFA)
+Green for success states (#2DB875)
+Rounded, soft UI — think Apple-inspired
+Fonts: Nunito for body, Sofia Pro for headlines (or similar clean sans-serif)
+Include sections: Hero, Features, How It Works, Privacy, Footer
+App Store download button (placeholder link for now)
 
-**Use Lovable**
+Include a Privacy Policy page and Terms & Conditions page
+Tone: Calm, intentional, empowering. Not preachy about screen time — position it as a tool for people who want to be more present.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+This project was built with [Lovable](https://lovable.dev).
 
-Changes made via Lovable will be committed automatically to this repo.
+**Live app**: https://detach-focus-flow.lovable.app
 
-**Use your preferred IDE**
+## Build with Lovable
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/ee9180a2-6f29-47a1-b941-1852d05a6f30).
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
-Follow these steps:
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+git clone <this-repository-url>
+cd <repository-name>
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
