@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import PhoneFrame from "./PhoneFrame";
-import { RulesScreen } from "./AppScreens";
-import AppStoreBadge from "./AppStoreBadge";
+import { BlockScreen } from "./AppScreens";
 import { SITE } from "@/config/site";
 
 const Hero = () => (
@@ -17,20 +16,20 @@ const Hero = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <span className="section-label">Screen time, on your terms</span>
+        <span className="section-label">Strict by design</span>
         <h1 className="mt-4 font-display text-[clamp(2.8rem,6vw,4.5rem)] font-extrabold leading-[0.98] tracking-tight">
-          Use your phone on{" "}
-          <span className="text-mint-gradient">your terms.</span>
+          Put down the phone.<br />
+          <span className="text-mint-gradient">For real this time.</span>
         </h1>
         <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
-          Create simple rules that stop distracting apps from taking over your day.
+          Pause blocks distracting apps and websites, and makes your limits harder to undo when your willpower disappears.
         </p>
         <div className="mt-9 flex flex-wrap items-center gap-3">
           <a
             href={SITE.appStoreUrl}
             className="rounded-full bg-accent px-7 py-3.5 font-semibold text-accent-foreground transition-transform hover:-translate-y-0.5"
           >
-            Download for iPhone
+            Get Pause Free
           </a>
           <a
             href="#how-it-works"
@@ -39,7 +38,7 @@ const Hero = () => (
             See How It Works
           </a>
         </div>
-        <AppStoreBadge className="mt-6" />
+        <p className="mt-5 text-sm text-muted-foreground">Free on iPhone. No account required.</p>
       </motion.div>
 
       <motion.div
@@ -47,8 +46,8 @@ const Hero = () => (
         animate={{ opacity: 1, y: 0, rotate: 0 }}
         transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
       >
-        <PhoneFrame label="iPhone showing the Pause Rules screen">
-          <RulesScreen />
+        <PhoneFrame label="iPhone showing a Pause block screen">
+          <BlockScreen />
         </PhoneFrame>
       </motion.div>
     </div>

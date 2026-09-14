@@ -7,7 +7,8 @@ import { SITE } from "@/config/site";
 
 const links = [
   { label: "How It Works", to: "/#how-it-works" },
-  { label: "Rules", to: "/#rules" },
+  { label: "Features", to: "/#features" },
+  { label: "Insights", to: "/#insights" },
   { label: "FAQ", to: "/#faq" },
 ];
 
@@ -43,7 +44,7 @@ const Navbar = () => {
             href={SITE.appStoreUrl}
             className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
           >
-            Download for iPhone
+            Get Pause Free
           </a>
         </div>
 
@@ -80,7 +81,7 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
                 className="mt-3 block rounded-full bg-accent px-5 py-3 text-center text-sm font-semibold text-accent-foreground"
               >
-                Download for iPhone
+                Get Pause Free
               </a>
             </div>
           </motion.div>

@@ -38,7 +38,7 @@ const RuleSection = ({
         className={reverse ? "md:order-2" : ""}
       >
         <span className="section-label">
-          Rule {index} — {ruleName}
+          {String(index).padStart(2, "0")} · {ruleName}
         </span>
         <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-extrabold leading-[1.04] tracking-tight">
           {headline}
