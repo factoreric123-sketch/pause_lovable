@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import AppStoreBadge from "./AppStoreBadge";
 import { SITE } from "@/config/site";
 
 const FinalCta = () => (
@@ -16,19 +15,19 @@ const FinalCta = () => (
       className="relative mx-auto max-w-3xl"
     >
       <h2 className="font-display text-[clamp(2.4rem,6vw,4rem)] font-extrabold leading-[1.02] tracking-tight">
-        Set the rule. <span className="text-mint-gradient">Get back to your life.</span>
+        Make distraction <span className="text-mint-gradient">harder.</span>
       </h2>
       <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-        Spend less time fighting your phone and more time using it intentionally.
+        You've already decided how you want to spend your time. Pause helps you stick to it.
       </p>
-      <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+      <div className="mt-10 flex flex-col items-center gap-3">
         <a
           href={SITE.appStoreUrl}
           className="rounded-full bg-accent px-8 py-4 font-semibold text-accent-foreground transition-transform hover:-translate-y-0.5"
         >
-          Download for iPhone
+          Get Pause Free
         </a>
-        <AppStoreBadge />
+        <p className="text-sm text-muted-foreground">Available on iPhone.</p>
       </div>
     </motion.div>
   </section>

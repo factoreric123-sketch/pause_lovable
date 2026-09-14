@@ -3,40 +3,38 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export const faqs = [
   {
-    q: "How does it work?",
-    a: "You choose the apps that distract you and create one of four types of rules: a Session, a Schedule, a Time Limit or an Open Limit. The rule then controls when and how much you can use those apps.",
+    q: "Is Pause free?",
+    a: "Yes. Pause is currently free to download and use.",
   },
   {
-    q: "What's a Session?",
-    a: "A Session blocks the apps you pick for a set amount of time, starting the moment you begin it. Good for studying, working or being with people.",
+    q: "Is Pause available on Android?",
+    a: "Not right now. Pause is currently available on iPhone and uses Apple's Screen Time technology to enforce its restrictions.",
   },
   {
-    q: "What's a Schedule?",
-    a: "A Schedule blocks apps between the times you choose on the days you choose, and it runs automatically. Set it once and it repeats.",
+    q: "Can Pause block websites too?",
+    a: "Yes. App Lists can include supported websites as well as apps.",
   },
   {
-    q: "What's a Time Limit?",
-    a: "A Time Limit is a daily allowance. Choose how many minutes you're willing to spend in an app each day, and once you've used them the app is blocked.",
+    q: "Will Pause block my calls or texts?",
+    a: "Pause is designed to block the apps and websites you select, not your phone service.",
   },
   {
-    q: "What's an Open Limit?",
-    a: "An Open Limit caps how many times you can open an app each day, so checking it becomes a decision instead of a habit.",
+    q: "Why does Pause need Screen Time permission?",
+    a: "Pause uses Apple's Screen Time APIs to apply the app and website restrictions you create. Without Screen Time permission, Pause cannot enforce those blocks.",
   },
   {
-    q: "What happens when I reach my limit?",
-    a: "The app is blocked for the rest of the day and resets the next day.",
-  },
-  { q: "Can I block multiple apps?", a: "Yes. A single rule can cover as many apps as you want." },
-  {
-    q: "Can I create multiple rules?",
-    a: "Yes. You can run different rules for different apps at the same time.",
+    q: "How many apps can I add?",
+    a: "Apple currently limits app selections within a group. Pause supports up to 50 selected apps per App List.",
   },
   {
-    q: "Can I make a rule harder to disable?",
-    a: "Yes. When creating a rule you can turn on stricter controls such as Hard Mode or Disable Resets to make the rule harder to undo in the moment.",
+    q: "Can I get out of a block in an emergency?",
+    a: "Yes. Pause includes configurable Emergency Exits so you have a genuine escape hatch when you really need one. Those exits can be limited instead of functioning as an unlimited skip button.",
   },
-  { q: "Does it work on iPhone?", a: "Yes. The app is currently available for iPhone." },
-  { q: "Is Android available?", a: "Not yet." },
+  {
+    q: "Does Pause collect my data?",
+    a: "Your App Lists, schedules, and Pause session history remain on your device. Pause does not require an account and does not show ads. It sends a minimal anonymous daily usage ping so we can understand overall active usage.",
+  },
+  { q: "Can I block Instagram but still receive calls?", a: "Yes. Pause targets the apps and websites you choose rather than disabling your entire phone." },
 ];
 
 const Faq = () => (
