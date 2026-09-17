@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import icon from "@/assets/pause-icon.jpg";
+import icon from "@/assets/pause-bars.png";
 import { SITE } from "@/config/site";
 
 const links = [

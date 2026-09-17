@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import icon from "@/assets/pause-icon.jpg";
+import icon from "@/assets/pause-bars.png";
 import { SITE } from "@/config/site";
 import { AppleGlyph } from "./AppStoreBadge";
 
