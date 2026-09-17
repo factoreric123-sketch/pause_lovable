@@ -60,8 +60,8 @@ const PrivacyPolicy = () => {
 
           <h2>Your choices</h2>
           <p>
-            You can ask us to delete any information you have sent us by emailing{" "}
-            <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+            You can ask us to delete any information you have sent us through our{" "}
+            <Link to="/contact">contact form</Link>.
           </p>
 
           <h2>Changes</h2>
@@ -69,7 +69,7 @@ const PrivacyPolicy = () => {
 
           <h2>Contact</h2>
           <p>
-            Questions? Email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+            Questions? Use our <Link to="/contact">contact form</Link>.
           </p>
         </div>
       </main>

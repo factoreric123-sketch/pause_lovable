@@ -23,8 +23,7 @@ var get_product_info_default = defineTool({
       ads: false,
       blocking_methods: ["Pause", "Schedule", "Time Limit", "Open Limit", "Friction Lock"],
       app_store_url: null,
-      website: "https://getdetach.app",
-      support_email: "hello@getdetach.app"
+      website: "https://getdetach.app"
     };
     return {
       content: [{ type: "text", text: JSON.stringify(info, null, 2) }],

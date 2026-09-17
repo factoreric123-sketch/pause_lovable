@@ -48,7 +48,7 @@ const OrderConfirmationEmail = ({
         <Hr style={hr} />
 
         <Text style={footer}>
-          Questions? Reply to this email or contact us at getdetach@gmail.com
+          Questions? Reply to this email.
         </Text>
       </Container>
     </Body>

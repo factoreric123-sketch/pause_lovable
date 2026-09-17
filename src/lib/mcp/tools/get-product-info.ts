@@ -18,7 +18,6 @@ export default defineTool({
       blocking_methods: ["Pause", "Schedule", "Time Limit", "Open Limit", "Friction Lock"],
       app_store_url: null,
       website: "https://getdetach.app",
-      support_email: "hello@getdetach.app",
     };
     return {
       content: [{ type: "text", text: JSON.stringify(info, null, 2) }],
