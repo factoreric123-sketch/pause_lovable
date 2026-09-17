@@ -6,7 +6,6 @@ export const SITE = {
   // Replace the contact destination when the App Store listing is live.
   appStoreUrl: "/contact",
   ctaLabel: "Ask about launch",
-  contactEmail: "hello@getdetach.app",
 };
 
 export const RULES = [

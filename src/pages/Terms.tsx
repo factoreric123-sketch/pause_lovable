@@ -60,7 +60,7 @@ const Terms = () => {
 
           <h2>Contact</h2>
           <p>
-            Questions? Email <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+            Questions? Use our <Link to="/contact">contact form</Link>.
           </p>
         </div>
       </main>
