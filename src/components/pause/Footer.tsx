@@ -9,7 +9,7 @@ const Footer = () => (
       <div className="grid gap-10 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-2.5">
-            <img src={icon} alt="Pause app icon" className="h-8 w-8 rounded-[0.6rem]" />
+            <img src={icon} alt="Pause logo" className="h-8 w-auto" />
             <span className="font-display text-lg font-bold">{SITE.name}</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
