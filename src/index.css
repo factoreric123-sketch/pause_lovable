@@ -138,4 +138,33 @@
   .legal-content a {
     @apply text-accent hover:underline;
   }
+
+  .blog-content h1 {
+    @apply mt-4 font-display text-4xl font-extrabold leading-tight sm:text-5xl;
+  }
+  .blog-content h2 {
+    @apply mb-4 mt-14 text-2xl font-bold leading-snug sm:text-3xl;
+  }
+  .blog-content h3 {
+    @apply mb-3 mt-9 text-xl font-semibold leading-snug;
+  }
+  .blog-content p {
+    @apply my-5 text-base leading-8 text-muted-foreground sm:text-lg;
+  }
+  .blog-content strong {
+    @apply font-semibold text-foreground;
+  }
+  .blog-content ul,
+  .blog-content ol {
+    @apply my-6 space-y-4 pl-6 text-base leading-8 text-muted-foreground sm:text-lg;
+  }
+  .blog-content ul {
+    @apply list-disc;
+  }
+  .blog-content ol {
+    @apply list-decimal;
+  }
+  .blog-content .blog-callout {
+    @apply my-10 border-l-2 border-accent pl-6 font-display text-2xl font-semibold leading-snug text-foreground;
+  }
 }

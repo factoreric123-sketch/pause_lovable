@@ -10,6 +10,7 @@ const links = [
   { label: "Features", to: "/#features" },
   { label: "Strict Mode", to: "/#strict-mode" },
   { label: "FAQ", to: "/#faq" },
+  { label: "Blog", to: "/blog" },
 ];
 
 const Navbar = () => {

@@ -7,6 +7,6 @@ export default defineMcp({
   title: "Pause",
   version: "0.1.0",
   instructions:
-    "Public tools for getdetach.app. Use `get_product_info` for current Pause features and availability; use `get_site_links` for canonical page URLs.",
+    "Public tools for pauseappblocker.com. Use `get_product_info` for current Pause features and availability; use `get_site_links` for canonical page URLs.",
   tools: [getProductInfo, getSiteLinks],
 });

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
-  <url><loc>https://getdetach.app/</loc><priority>1.0</priority></url>
-  <url><loc>https://getdetach.app/contact</loc><priority>0.5</priority></url>
-  <url><loc>https://getdetach.app/privacy-policy</loc><priority>0.3</priority></url>
-  <url><loc>https://getdetach.app/terms</loc><priority>0.3</priority></url>
+  <url><loc>https://pauseappblocker.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://pauseappblocker.com/blog</loc><priority>0.8</priority></url>
+  <url><loc>https://pauseappblocker.com/blog/remove-ignore-limit-screen-time</loc><priority>0.8</priority></url>
+  <url><loc>https://pauseappblocker.com/contact</loc><priority>0.5</priority></url>
+  <url><loc>https://pauseappblocker.com/privacy-policy</loc><priority>0.3</priority></url>
+  <url><loc>https://pauseappblocker.com/terms</loc><priority>0.3</priority></url>
 </urlset>

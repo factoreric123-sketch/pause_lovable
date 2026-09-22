@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://getdetach.app/sitemap.xml
+Sitemap: https://pauseappblocker.com/sitemap.xml

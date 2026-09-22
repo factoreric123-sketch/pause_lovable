@@ -12,7 +12,9 @@
 An App List is a group of selected apps and supported websites. Pause requires no account, shows no ads, and is free right now.
 
 ## Pages
-- Home: https://getdetach.app/
-- Contact: https://getdetach.app/contact
-- Privacy Policy: https://getdetach.app/privacy-policy
-- Terms: https://getdetach.app/terms
+- Home: https://pauseappblocker.com/
+- Blog: https://pauseappblocker.com/blog
+- How to Remove Ignore Limit on Screen Time: https://pauseappblocker.com/blog/remove-ignore-limit-screen-time
+- Contact: https://pauseappblocker.com/contact
+- Privacy Policy: https://pauseappblocker.com/privacy-policy
+- Terms: https://pauseappblocker.com/terms
