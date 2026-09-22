@@ -31,7 +31,7 @@
       {
         "name": "get_site_links",
         "title": "Get site links",
-        "description": "Return the key public URLs on getdetach.app so assistants can link users to the right page.",
+        "description": "Return the key public URLs on pauseappblocker.com so assistants can link users to the right page.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
