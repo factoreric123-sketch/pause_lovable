@@ -1,11 +1,11 @@
-const SITE = "https://getdetach.app";
+const SITE = "https://pauseappblocker.com";
 
 const toAbsoluteUrl = (input: string): string => {
   if (!input) return `${SITE}/`;
   // Already absolute — return as-is, never re-prefix with SITE.
   if (/^https?:\/\//i.test(input)) return input;
-  // Strip any accidental leading copies of the site host (e.g. "getdetach.app/foo").
-  let path = input.replace(/^(https?:\/\/)?(www\.)?getdetach\.app/i, "");
+  // Strip any accidental leading copies of the site host.
+  let path = input.replace(/^(https?:\/\/)?(www\.)?pauseappblocker\.com/i, "");
   if (!path.startsWith("/")) path = `/${path}`;
   return `${SITE}${path}`;
 };
