@@ -23,7 +23,7 @@ var get_product_info_default = defineTool({
       ads: false,
       blocking_methods: ["Pause", "Schedule", "Time Limit", "Open Limit", "Friction Lock"],
       app_store_url: null,
-      website: "https://getdetach.app"
+      website: "https://pauseappblocker.com"
     };
     return {
       content: [{ type: "text", text: JSON.stringify(info, null, 2) }],
@@ -37,15 +37,17 @@ import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.24.0";
 var get_site_links_default = defineTool2({
   name: "get_site_links",
   title: "Get site links",
-  description: "Return the key public URLs on getdetach.app so assistants can link users to the right page.",
+  description: "Return the key public URLs on pauseappblocker.com so assistants can link users to the right page.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const links = {
-      home: "https://getdetach.app/",
-      contact: "https://getdetach.app/contact",
-      privacy_policy: "https://getdetach.app/privacy-policy",
-      terms: "https://getdetach.app/terms",
+      home: "https://pauseappblocker.com/",
+      blog: "https://pauseappblocker.com/blog",
+      remove_ignore_limit_guide: "https://pauseappblocker.com/blog/remove-ignore-limit-screen-time",
+      contact: "https://pauseappblocker.com/contact",
+      privacy_policy: "https://pauseappblocker.com/privacy-policy",
+      terms: "https://pauseappblocker.com/terms",
       app_store: null
     };
     return {
@@ -60,7 +62,7 @@ var mcp_default = defineMcp({
   name: "pause-mcp",
   title: "Pause",
   version: "0.1.0",
-  instructions: "Public tools for getdetach.app. Use `get_product_info` for current Pause features and availability; use `get_site_links` for canonical page URLs.",
+  instructions: "Public tools for pauseappblocker.com. Use `get_product_info` for current Pause features and availability; use `get_site_links` for canonical page URLs.",
   tools: [get_product_info_default, get_site_links_default]
 });
 

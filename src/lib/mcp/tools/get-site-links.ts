@@ -3,15 +3,17 @@ import { defineTool } from "@lovable.dev/mcp-js";
 export default defineTool({
   name: "get_site_links",
   title: "Get site links",
-  description: "Return the key public URLs on getdetach.app so assistants can link users to the right page.",
+  description: "Return the key public URLs on pauseappblocker.com so assistants can link users to the right page.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const links = {
-      home: "https://getdetach.app/",
-      contact: "https://getdetach.app/contact",
-      privacy_policy: "https://getdetach.app/privacy-policy",
-      terms: "https://getdetach.app/terms",
+      home: "https://pauseappblocker.com/",
+      blog: "https://pauseappblocker.com/blog",
+      remove_ignore_limit_guide: "https://pauseappblocker.com/blog/remove-ignore-limit-screen-time",
+      contact: "https://pauseappblocker.com/contact",
+      privacy_policy: "https://pauseappblocker.com/privacy-policy",
+      terms: "https://pauseappblocker.com/terms",
       app_store: null,
     };
     return {
