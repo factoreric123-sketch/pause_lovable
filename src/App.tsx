@@ -10,6 +10,7 @@ import Terms from "./pages/Terms";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import RemoveIgnoreLimitScreenTime from "./pages/RemoveIgnoreLimitScreenTime";
+import DeleteAppBlockerBypassIphone from "./pages/DeleteAppBlockerBypassIphone";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/remove-ignore-limit-screen-time" element={<RemoveIgnoreLimitScreenTime />} />
+          <Route path="/blog/delete-app-blocker-bypass-iphone" element={<DeleteAppBlockerBypassIphone />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
