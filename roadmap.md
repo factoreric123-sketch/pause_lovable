@@ -11,4 +11,4 @@
 - [x] Add article metadata, structured data, and discovery files
 - [x] Verify desktop and mobile layouts, links, and metadata
 - [x] Add the second article about deleting an iPhone app blocker
-- [ ] Verify the second article on desktop and mobile
+- [x] Verify the second article on desktop and mobile
