@@ -31,6 +31,24 @@ const Blog = () => {
           <h2 id="latest-articles" className="text-2xl font-bold">Latest</h2>
           <div className="mt-6 grid max-w-3xl gap-6">
             <article className="surface-card surface-card-hover p-7 sm:p-9">
+              <p className="text-sm font-semibold text-accent">Screen Time</p>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
+                <Link to="/blog/block-social-media-iphone" className="transition-colors hover:text-accent">
+                  How to Block Social Media on iPhone (Instagram, TikTok, YouTube, Reddit, X)
+                </Link>
+              </h3>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Five methods that work, from free Screen Time steps to a blocker with no override — including the browser versions most guides forget.
+              </p>
+              <Link
+                to="/blog/block-social-media-iphone"
+                className="mt-6 inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80"
+              >
+                Read article <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
+
+            <article className="surface-card surface-card-hover p-7 sm:p-9">
               <p className="text-sm font-semibold text-accent">App blockers</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
                 <Link to="/blog/best-app-blockers-iphone" className="transition-colors hover:text-accent">
