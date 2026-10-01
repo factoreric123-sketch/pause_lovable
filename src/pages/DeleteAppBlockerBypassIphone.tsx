@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
+import { SITE } from "@/config/site";
 
 const title = "Can You Delete an App Blocker to Bypass It? iPhone Truth";
 const description = "Can you bypass an iPhone app blocker by deleting it? Here's what actually happens, which blocks survive uninstall, and why deletion isn't the real fix.";
@@ -136,9 +137,9 @@ const DeleteAppBlockerBypassIphone = () => {
           <aside className="surface-card my-12 p-7 sm:p-8" aria-label="Download Pause">
             <h2 className="mt-0">Set a block that costs something to break.</h2>
             <p>Pause makes your own limits harder to undo when the impulse hits.</p>
-            <Link to="/contact" className="inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80">
+            <a href={SITE.appStoreUrl} className="inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80">
               Download Pause for iPhone <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
           </aside>
 
           <h2>FAQs</h2>
