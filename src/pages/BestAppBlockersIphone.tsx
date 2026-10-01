@@ -5,12 +5,13 @@ import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
+import { blogPostSchema } from "@/lib/schema";
+import { getRoute } from "@/prerender-routes";
 
 const title = "Best App Blockers for iPhone (2026): Tested by Bypass";
 const description =
   "The best iPhone app blockers in 2026, ranked by how hard each one is to bypass — not by feature lists. Includes free options and where every blocker still fails.";
 const path = "/blog/best-app-blockers-iphone";
-const url = `https://pauseappblocker.com${path}`;
 
 const faqs = [
   {
@@ -50,35 +51,7 @@ const faqs = [
   },
 ];
 
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      headline: "Best App Blockers for iPhone (2026): Ranked by How Hard They Are to Bypass",
-      description,
-      mainEntityOfPage: url,
-      author: { "@type": "Organization", name: "Pause" },
-      publisher: { "@type": "Organization", name: "Pause", url: "https://pauseappblocker.com/" },
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://pauseappblocker.com/" },
-        { "@type": "ListItem", position: 2, name: "Blog", item: "https://pauseappblocker.com/blog" },
-        { "@type": "ListItem", position: 3, name: "Best App Blockers for iPhone", item: url },
-      ],
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: faqs.map(({ question, answer }) => ({
-        "@type": "Question",
-        name: question,
-        acceptedAnswer: { "@type": "Answer", text: answer },
-      })),
-    },
-  ],
-};
+const schema = blogPostSchema(path, faqs);
 
 const Survives = ({ score }: { score: string }) => (
   <p className="text-sm font-semibold text-accent">Survives: {score}</p>
@@ -102,7 +75,7 @@ const BestAppBlockersIphone = () => {
         <article className="blog-content mt-10">
           <header className="border-b border-border pb-10">
             <p className="section-label">App blockers</p>
-            <h1>Best App Blockers for iPhone (2026): Ranked by How Hard They Are to Bypass</h1>
+            <h1>{getRoute(path).headline}</h1>
           </header>
 
           <p>Most "best app blocker for iPhone" lists rank on features. That's the wrong test. Nobody quits a blocker because it lacked a widget; they quit because they found the way around it in week two.</p>

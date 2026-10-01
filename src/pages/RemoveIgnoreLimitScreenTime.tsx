@@ -5,11 +5,12 @@ import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
+import { blogPostSchema } from "@/lib/schema";
+import { getRoute } from "@/prerender-routes";
 
 const title = "How to Remove Ignore Limit on Screen Time (iPhone 2026)";
 const description = "Remove the Ignore Limit option on Screen Time in two steps — plus the loophole nobody mentions, and why a passcode you already know won't stop you.";
 const path = "/blog/remove-ignore-limit-screen-time";
-const url = `https://pauseappblocker.com${path}`;
 
 const faqs = [
   {
@@ -38,35 +39,7 @@ const faqs = [
   },
 ];
 
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      headline: "How to Remove “Ignore Limit” on Screen Time (And Why It Still Won't Stop You)",
-      description,
-      mainEntityOfPage: url,
-      author: { "@type": "Organization", name: "Pause" },
-      publisher: { "@type": "Organization", name: "Pause", url: "https://pauseappblocker.com/" },
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://pauseappblocker.com/" },
-        { "@type": "ListItem", position: 2, name: "Blog", item: "https://pauseappblocker.com/blog" },
-        { "@type": "ListItem", position: 3, name: "Remove Ignore Limit on Screen Time", item: url },
-      ],
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: faqs.map(({ question, answer }) => ({
-        "@type": "Question",
-        name: question,
-        acceptedAnswer: { "@type": "Answer", text: answer },
-      })),
-    },
-  ],
-};
+const schema = blogPostSchema(path, faqs);
 
 const RemoveIgnoreLimitScreenTime = () => {
   useEffect(() => {
@@ -86,7 +59,7 @@ const RemoveIgnoreLimitScreenTime = () => {
         <article className="blog-content mt-10">
           <header className="border-b border-border pb-10">
             <p className="section-label">Screen Time</p>
-            <h1>How to Remove &quot;Ignore Limit&quot; on Screen Time (And Why It Still Won&apos;t Stop You)</h1>
+            <h1>{getRoute(path).headline}</h1>
           </header>
 
           <p>You set a 30-minute limit on Instagram. You hit it. A grey screen appears, you tap Ignore Limit for Today, and you&apos;re back in the feed before you&apos;ve finished reading the warning.</p>

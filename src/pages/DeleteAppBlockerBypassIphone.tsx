@@ -5,11 +5,12 @@ import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
+import { blogPostSchema } from "@/lib/schema";
+import { getRoute } from "@/prerender-routes";
 
 const title = "Can You Delete an App Blocker to Bypass It? iPhone Truth";
 const description = "Can you bypass an iPhone app blocker by deleting it? Here's what actually happens, which blocks survive uninstall, and why deletion isn't the real fix.";
 const path = "/blog/delete-app-blocker-bypass-iphone";
-const url = `https://pauseappblocker.com${path}`;
 
 const faqs = [
   {
@@ -38,35 +39,7 @@ const faqs = [
   },
 ];
 
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      headline: "Can't I Just Delete the App Blocker? What Actually Happens on iPhone",
-      description,
-      mainEntityOfPage: url,
-      author: { "@type": "Organization", name: "Pause" },
-      publisher: { "@type": "Organization", name: "Pause", url: "https://pauseappblocker.com/" },
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://pauseappblocker.com/" },
-        { "@type": "ListItem", position: 2, name: "Blog", item: "https://pauseappblocker.com/blog" },
-        { "@type": "ListItem", position: 3, name: "Delete an App Blocker to Bypass It", item: url },
-      ],
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: faqs.map(({ question, answer }) => ({
-        "@type": "Question",
-        name: question,
-        acceptedAnswer: { "@type": "Answer", text: answer },
-      })),
-    },
-  ],
-};
+const schema = blogPostSchema(path, faqs);
 
 const DeleteAppBlockerBypassIphone = () => {
   useEffect(() => {
@@ -86,7 +59,7 @@ const DeleteAppBlockerBypassIphone = () => {
         <article className="blog-content mt-10">
           <header className="border-b border-border pb-10">
             <p className="section-label">App blockers</p>
-            <h1>Can&apos;t I Just Delete the App Blocker? What Actually Happens on iPhone</h1>
+            <h1>{getRoute(path).headline}</h1>
           </header>
 
           <p>It&apos;s the first thought everyone has before paying for an app blocker: what stops me from deleting it?</p>
