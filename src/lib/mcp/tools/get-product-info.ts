@@ -16,7 +16,7 @@ export default defineTool({
       account_required: false,
       ads: false,
       blocking_methods: ["Pause", "Schedule", "Time Limit", "Open Limit", "Friction Lock"],
-      app_store_url: null,
+      app_store_url: "https://apps.apple.com/us/app/pause-app-blocker/id6805745768",
       website: "https://pauseappblocker.com",
     };
     return {

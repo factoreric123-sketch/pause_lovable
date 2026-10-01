@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
+import { SITE } from "@/config/site";
 
 const title = "How to Block Social Media on iPhone (2026 Guide)";
 const description =
@@ -178,7 +179,7 @@ const BlockSocialMediaIphone = () => {
           <p>Every method above shares one flaw: you hold the off switch, and turning it off takes seconds.</p>
           <p>That's the actual failure point. People rarely delete their blocker or reset their phone; they tap the override, because it's free and instant.</p>
           <p>A dedicated iPhone app blocker fixes that by making the unlock cost something. That's what Pause does: no pause button to tap, a challenge before access instead of a one-tap escape, daily limits that hold instead of quietly resetting, and website blocking alongside app blocking so Safari isn't a side door.</p>
-          <p><Link to="/" className="font-semibold text-accent transition-opacity hover:opacity-80">Download Pause for iPhone</Link> if you already know you're the one who bypasses.</p>
+          <p><a href={SITE.appStoreUrl} className="font-semibold text-accent transition-opacity hover:opacity-80">Download Pause for iPhone</a> if you already know you're the one who bypasses.</p>
 
           <h2>Quick reference: blocking each platform</h2>
           <div className="my-10 overflow-x-auto">
@@ -218,9 +219,9 @@ const BlockSocialMediaIphone = () => {
           <aside className="surface-card my-12 p-7 sm:p-8" aria-label="Download Pause">
             <h2 className="mt-0">Block the app and the browser, in one place.</h2>
             <p>Pause makes your own limits harder to undo when the impulse hits.</p>
-            <Link to="/" className="inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80">
+            <a href={SITE.appStoreUrl} className="inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80">
               Download Pause for iPhone <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
           </aside>
 
           <h2>FAQs</h2>

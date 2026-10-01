@@ -14,11 +14,26 @@ import { setCanonical } from "@/lib/canonical";
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({
-    "@type": "Question", name: f.q,
-    acceptedAnswer: { "@type": "Answer", text: f.a },
-  })),
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      name: "Pause",
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: "iOS 17.0 or later",
+      description: "A free iPhone app and website blocker that makes self-imposed limits harder to undo impulsively.",
+      url: "https://pauseappblocker.com/",
+      downloadUrl: "https://apps.apple.com/us/app/pause-app-blocker/id6805745768",
+      installUrl: "https://apps.apple.com/us/app/pause-app-blocker/id6805745768",
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question", name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
 };
 const Index = () => {
   const { hash } = useLocation();

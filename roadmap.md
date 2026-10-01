@@ -12,3 +12,9 @@
 - [x] Verify desktop and mobile layouts, links, and metadata
 - [x] Add the second article about deleting an iPhone app blocker
 - [x] Verify the second article on desktop and mobile
+
+# App Store launch
+
+- [x] Connect every download button to the live App Store listing
+- [x] Replace pre-launch copy and update public metadata
+- [x] Update structured data and assistant-facing product information
