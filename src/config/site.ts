@@ -2,10 +2,9 @@ export const SITE = {
   name: "Pause",
   tagline: "Use your phone on your terms.",
   description:
-    "Pause is an upcoming iPhone app and website blocker. Set focus sessions, daily limits, and challenges before access.",
-  // Replace the contact destination when the App Store listing is live.
-  appStoreUrl: "/contact",
-  ctaLabel: "Ask about launch",
+    "Pause is a free iPhone app and website blocker. Set focus sessions, daily limits, and challenges before access.",
+  appStoreUrl: "https://apps.apple.com/us/app/pause-app-blocker/id6805745768",
+  ctaLabel: "Get Pause Free",
 };
 
 export const RULES = [

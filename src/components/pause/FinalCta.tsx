@@ -27,7 +27,7 @@ const FinalCta = () => (
         >
           {SITE.ctaLabel}
         </a>
-        <p className="text-sm text-muted-foreground">Coming to iPhone. Contact us with launch questions.</p>
+        <p className="text-sm text-muted-foreground">Available now on the App Store.</p>
       </div>
     </motion.div>
   </section>

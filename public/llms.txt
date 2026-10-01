@@ -9,10 +9,11 @@
 - Open Limit: allow a set number of opens per day.
 - Friction Lock: require one or more challenges before a protected app opens.
 
-An App List is a group of selected apps and supported websites. Pause requires no account, shows no ads, and is free right now.
+An App List is a group of selected apps and supported websites. Pause requires no account, shows no ads, and is available free on the iPhone App Store.
 
 ## Pages
 - Home: https://pauseappblocker.com/
+- Download on the App Store: https://apps.apple.com/us/app/pause-app-blocker/id6805745768
 - Blog: https://pauseappblocker.com/blog
 - Can You Delete an App Blocker to Bypass It?: https://pauseappblocker.com/blog/delete-app-blocker-bypass-iphone
 - How to Remove Ignore Limit on Screen Time: https://pauseappblocker.com/blog/remove-ignore-limit-screen-time

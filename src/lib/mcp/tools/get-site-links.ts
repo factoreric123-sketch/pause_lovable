@@ -14,7 +14,7 @@ export default defineTool({
       contact: "https://pauseappblocker.com/contact",
       privacy_policy: "https://pauseappblocker.com/privacy-policy",
       terms: "https://pauseappblocker.com/terms",
-      app_store: null,
+      app_store: "https://apps.apple.com/us/app/pause-app-blocker/id6805745768",
     };
     return {
       content: [{ type: "text", text: JSON.stringify(links, null, 2) }],

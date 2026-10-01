@@ -3,12 +3,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export const faqs = [
   {
-    q: "Can I download Pause yet?",
-    a: "Not yet. Pause is in development for iPhone. Contact us if you have questions about launch or availability.",
+    q: "Where can I download Pause?",
+    a: "Pause is available free on the App Store for iPhone.",
   },
   {
     q: "Is Pause available on Android?",
-    a: "Pause is being developed for iPhone, using Apple's Screen Time technology. An Android version is not currently available.",
+    a: "Pause is available for iPhone and uses Apple's Screen Time technology. An Android version is not currently available.",
   },
   {
     q: "Can Pause block websites too?",

@@ -15,7 +15,7 @@ const Hero = () => (
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <span className="section-label">Coming to iPhone</span>
+        <span className="section-label">Available on the App Store</span>
         <h1 className="mt-4 font-display text-[clamp(2.8rem,6vw,4.5rem)] font-extrabold leading-[0.98] tracking-tight">
           Pause.<br />
           <span className="text-mint-gradient">Your phone, on your terms.</span>
@@ -37,7 +37,7 @@ const Hero = () => (
             See How It Works
           </a>
         </div>
-        <p className="mt-5 text-sm text-muted-foreground">In development for iPhone. No account required in the app.</p>
+        <p className="mt-5 text-sm text-muted-foreground">Free on iPhone. No account required.</p>
       </motion.div>
 
       <motion.div
