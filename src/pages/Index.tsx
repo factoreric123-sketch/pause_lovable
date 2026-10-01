@@ -11,30 +11,9 @@ import FinalCta from "@/components/pause/FinalCta";
 import Footer from "@/components/pause/Footer";
 import TrustPoints from "@/components/pause/TrustPoints";
 import { setCanonical } from "@/lib/canonical";
+import { homeSchema } from "@/lib/schema";
 
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      name: "Pause",
-      applicationCategory: "UtilitiesApplication",
-      operatingSystem: "iOS 17.0 or later",
-      description: "A free iPhone app and website blocker that makes self-imposed limits harder to undo impulsively.",
-      url: "https://pauseappblocker.com/",
-      downloadUrl: "https://apps.apple.com/us/app/pause-app-blocker/id6805745768",
-      installUrl: "https://apps.apple.com/us/app/pause-app-blocker/id6805745768",
-      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: faqs.map((f) => ({
-        "@type": "Question", name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
-      })),
-    },
-  ],
-};
+const schema = homeSchema(faqs.map((f) => ({ question: f.q, answer: f.a })));
 const Index = () => {
   const { hash } = useLocation();
   useEffect(() => {

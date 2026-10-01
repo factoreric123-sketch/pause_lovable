@@ -5,12 +5,13 @@ import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
+import { blogPostSchema } from "@/lib/schema";
+import { getRoute } from "@/prerender-routes";
 
 const title = "How to Block Social Media on iPhone (2026 Guide)";
 const description =
   "Block Instagram, TikTok, YouTube, Reddit and X on iPhone — apps and the browser versions most guides forget. Free Screen Time methods plus what to do when they fail.";
 const path = "/blog/block-social-media-iphone";
-const url = `https://pauseappblocker.com${path}`;
 
 const faqs = [
   {
@@ -83,35 +84,7 @@ const tableRows = [
   },
 ];
 
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      headline: "How to Block Social Media on iPhone (Instagram, TikTok, YouTube, Reddit, X)",
-      description,
-      mainEntityOfPage: url,
-      author: { "@type": "Organization", name: "Pause" },
-      publisher: { "@type": "Organization", name: "Pause", url: "https://pauseappblocker.com/" },
-    },
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://pauseappblocker.com/" },
-        { "@type": "ListItem", position: 2, name: "Blog", item: "https://pauseappblocker.com/blog" },
-        { "@type": "ListItem", position: 3, name: "Block Social Media on iPhone", item: url },
-      ],
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: faqs.map(({ question, answer }) => ({
-        "@type": "Question",
-        name: question,
-        acceptedAnswer: { "@type": "Answer", text: answer },
-      })),
-    },
-  ],
-};
+const schema = blogPostSchema(path, faqs);
 
 const BlockSocialMediaIphone = () => {
   useEffect(() => {
@@ -131,7 +104,7 @@ const BlockSocialMediaIphone = () => {
         <article className="blog-content mt-10">
           <header className="border-b border-border pb-10">
             <p className="section-label">Screen Time</p>
-            <h1>How to Block Social Media on iPhone (Instagram, TikTok, YouTube, Reddit, X)</h1>
+            <h1>{getRoute(path).headline}</h1>
           </header>
 
           <p>Most guides on how to block social media on iPhone tell you to set a Screen Time limit and stop there. Then you hit the limit, open Safari, and Instagram loads anyway.</p>

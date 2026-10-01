@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
+import { blogIndexSchema } from "@/lib/schema";
+
+const schema = blogIndexSchema();
 
 const Blog = () => {
   useEffect(() => {
@@ -17,6 +20,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Navbar />
       <main className="mx-auto max-w-6xl px-6 pb-24 pt-32">
         <header className="max-w-3xl">
