@@ -37,6 +37,22 @@ const faqs = [
     question: "Does restarting your iPhone bypass an app blocker?",
     answer: "Generally no. Screen Time restrictions persist through restarts and force quits, because they're stored at the system level rather than inside the app.",
   },
+  {
+    question: "Is there an app blocker that can't be deleted on iPhone?",
+    answer: "No. Apple's design keeps the device owner in control, so any app can be removed from an unsupervised iPhone. Some blockers use iOS restrictions to prevent deletion while a strict session is running, which raises the effort without making it impossible.",
+  },
+  {
+    question: "Can you block apps permanently on iPhone?",
+    answer: "You can block them indefinitely, but not irreversibly. Set a schedule with no end, or a daily limit that renews, and the block persists until you deliberately change it. Nothing on iOS is permanent in the sense of being unremovable by the phone's owner.",
+  },
+  {
+    question: "Does restarting my iPhone remove app blocks?",
+    answer: "No. Screen Time restrictions are stored at system level, not inside the app, so they survive restarts and force-quits. Rebooting is not a reliable way to test whether a blocker holds.",
+  },
+  {
+    question: "Can I just delete Pause to unblock my apps?",
+    answer: "Deleting any blocker mid-session is the slow route, not the fast one. Restrictions written into Screen Time can persist after the app is removed, leaving apps blocked with nothing installed to lift them. Ending a session properly is faster than uninstalling.",
+  },
 ];
 
 const schema = blogPostSchema(path, faqs);
