@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export const faqs = [
@@ -40,12 +40,12 @@ export const faqs = [
 const Faq = () => (
   <section id="faq" className="scroll-mt-20 border-t border-border/60 px-6 py-24 md:py-32">
     <div className="mx-auto max-w-3xl">
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+      <Reveal initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <span className="section-label">FAQ</span>
         <h2 className="mt-4 font-display text-[clamp(2.2rem,5vw,3.5rem)] font-extrabold leading-[1.04] tracking-tight">
           Questions, answered.
         </h2>
-      </motion.div>
+      </Reveal>
 
       <Accordion type="single" collapsible className="mt-10">
         {faqs.map((item) => (
@@ -53,7 +53,7 @@ const Faq = () => (
             <AccordionTrigger className="text-left font-display text-lg font-semibold hover:no-underline">
               {item.q}
             </AccordionTrigger>
-            <AccordionContent className="text-base leading-relaxed text-muted-foreground">{item.a}</AccordionContent>
+            <AccordionContent forceMount className="text-base leading-relaxed text-muted-foreground">{item.a}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>

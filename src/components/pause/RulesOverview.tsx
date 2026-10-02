@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 import { RULES } from "@/config/site";
 
 const RulesOverview = () => (
   <section id="features" className="scroll-mt-20 border-t border-border/60 px-6 py-24 md:py-32">
     <div className="mx-auto max-w-6xl">
-      <motion.div
+      <Reveal
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -15,11 +15,11 @@ const RulesOverview = () => (
           One app. Five ways to stop.
         </h2>
         <p className="mt-5 text-lg text-muted-foreground">Different habits need different kinds of friction. Pick the one that fits.</p>
-      </motion.div>
+      </Reveal>
 
       <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {RULES.map((rule, i) => (
-          <motion.div
+          <Reveal
             key={rule.id}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ const RulesOverview = () => (
             <h3 className="mt-2 font-display text-3xl font-extrabold tracking-tight">{rule.name}</h3>
             <p className="mt-4 font-display text-lg font-bold text-foreground/90">{rule.thought}</p>
             <p className="mt-2 text-muted-foreground">{rule.summary}</p>
-          </motion.div>
+          </Reveal>
         ))}
       </div>
     </div>

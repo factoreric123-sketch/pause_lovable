@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 
 const TimeCalculator = () => {
   const [hours, setHours] = useState(2);
@@ -8,12 +8,12 @@ const TimeCalculator = () => {
   return (
     <section className="border-t border-border/60 px-6 py-24 md:py-32">
       <div className="mx-auto max-w-5xl">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+        <Reveal initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <span className="section-label">The arithmetic</span>
           <h2 className="mt-4 max-w-2xl font-display text-[clamp(2.2rem,5vw,3.5rem)] font-extrabold leading-[1.04] tracking-tight">
             A little less scrolling adds up fast.
           </h2>
-        </motion.div>
+        </Reveal>
 
         <div className="surface-card mt-12 grid gap-8 p-7 md:grid-cols-[1.1fr_1.9fr] md:p-10">
           <div>

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 import { SITE } from "@/config/site";
 
 const FinalCta = () => (
@@ -8,7 +8,7 @@ const FinalCta = () => (
       style={{ background: "radial-gradient(ellipse 45% 55% at 50% 55%, hsl(var(--accent) / 0.14), transparent 70%)" }}
       aria-hidden="true"
     />
-    <motion.div
+    <Reveal
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -29,7 +29,7 @@ const FinalCta = () => (
         </a>
         <p className="text-sm text-muted-foreground">Available now on the App Store.</p>
       </div>
-    </motion.div>
+    </Reveal>
   </section>
 );
 

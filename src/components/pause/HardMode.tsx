@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 import { DoorOpen, ShieldCheck } from "lucide-react";
 
 const controls = [
@@ -17,7 +17,7 @@ const controls = [
 const HardMode = () => (
   <section id="strict-mode" className="scroll-mt-20 border-t border-border/60 px-6 py-16 md:py-20">
     <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:items-center">
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+      <Reveal initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <span className="section-label">Strict protections</span>
         <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-extrabold leading-[1.04] tracking-tight">
           Decide your limits before you start.
@@ -26,11 +26,11 @@ const HardMode = () => (
           Choose whether you can take a break, then turn on Strict Mode to lock editing until your session ends.
         </p>
         <p className="mt-6 font-display text-xl font-bold">Your session. Your rules. Set in advance.</p>
-      </motion.div>
+      </Reveal>
 
       <div className="space-y-4">
         {controls.map((c, i) => (
-          <motion.div
+          <Reveal
             key={c.name}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ const HardMode = () => (
               <h3 className="font-display text-xl font-bold">{c.name}</h3>
               <p className="mt-1.5 text-muted-foreground">{c.copy}</p>
             </div>
-          </motion.div>
+          </Reveal>
         ))}
       </div>
     </div>

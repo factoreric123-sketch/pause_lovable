@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 import { BadgeCheck, CircleOff, Smartphone, UserRoundX } from "lucide-react";
 
 const points = [
@@ -12,7 +12,7 @@ const TrustPoints = () => (
   <section className="border-t border-border/60 px-6 py-8">
     <div className="mx-auto grid max-w-6xl gap-3 sm:grid-cols-2 lg:grid-cols-4">
       {points.map((point, index) => (
-        <motion.div
+        <Reveal
           key={point.label}
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ const TrustPoints = () => (
         >
           <point.icon className="h-4 w-4 shrink-0 text-accent" />
           <span>{point.label}</span>
-        </motion.div>
+        </Reveal>
       ))}
     </div>
   </section>

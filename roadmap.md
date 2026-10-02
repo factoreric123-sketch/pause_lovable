@@ -18,3 +18,11 @@
 - [x] Connect every download button to the live App Store listing
 - [x] Replace pre-launch copy and update public metadata
 - [x] Update structured data and assistant-facing product information
+
+# Prerendered output fixes
+
+- [x] Keep FAQ answers in static HTML while preserving collapsed behavior
+- [x] Prevent hidden primary content in prerendered HTML
+- [x] Keep one canonical after hydration and remove keywords metadata
+- [x] Merge homepage schema into one linked graph
+- [x] Serve social preview metadata from pauseappblocker.com

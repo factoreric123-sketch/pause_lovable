@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 import PhoneFrame from "./PhoneFrame";
 import { InsightsScreen } from "./AppScreens";
 
@@ -11,7 +11,7 @@ const Insights = () => {
   return (
     <section id="insights" className="scroll-mt-20 border-t border-border/60 px-6 py-24 md:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+        <Reveal initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <span className="section-label">Insights</span>
           <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-extrabold leading-[1.04] tracking-tight">
             See how much time you're protecting.
@@ -35,12 +35,12 @@ const Insights = () => {
             ))}
           </div>
           <p className="mt-4 text-sm text-muted-foreground">Viewing: {period}</p>
-        </motion.div>
-        <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+        </Reveal>
+        <Reveal initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <PhoneFrame label="iPhone showing Pause protected-time insights">
             <InsightsScreen period={period} />
           </PhoneFrame>
-        </motion.div>
+        </Reveal>
       </div>
     </section>
   );

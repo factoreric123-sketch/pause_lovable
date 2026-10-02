@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 import { Check } from "lucide-react";
 
 const rows = [
@@ -18,12 +18,12 @@ const rows = [
 const Comparison = () => (
   <section className="border-t border-border/60 px-6 py-24 md:py-32">
     <div className="mx-auto max-w-5xl">
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+      <Reveal initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <span className="section-label">At a glance</span>
         <h2 className="mt-4 font-display text-[clamp(2.2rem,5vw,3.5rem)] font-extrabold leading-[1.04] tracking-tight">
           Your limits, built in.
         </h2>
-      </motion.div>
+      </Reveal>
       <div className="surface-card mt-12 overflow-hidden">
         <div className="grid grid-cols-[1.5fr_0.7fr_1fr] border-b border-border bg-secondary/50 px-4 py-4 text-sm font-bold sm:px-6">
           <span>Feature</span><span>Pause</span><span>What it does</span>
