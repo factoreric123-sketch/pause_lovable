@@ -12,6 +12,7 @@
 - [x] Verify desktop and mobile layouts, links, and metadata
 - [x] Add the second article about deleting an iPhone app blocker
 - [x] Verify the second article on desktop and mobile
+- [x] Add the Opal alternatives article and verify it on desktop and mobile
 
 # App Store launch
 
