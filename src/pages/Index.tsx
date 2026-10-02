@@ -6,14 +6,15 @@ import CoreIdea from "@/components/pause/CoreIdea";
 import RulesOverview from "@/components/pause/RulesOverview";
 import HardMode from "@/components/pause/HardMode";
 import PrivacySection from "@/components/pause/PrivacySection";
-import Faq, { faqs } from "@/components/pause/Faq";
+import Faq, { faqs, faqAnswerText } from "@/components/pause/Faq";
 import FinalCta from "@/components/pause/FinalCta";
 import Footer from "@/components/pause/Footer";
 import TrustPoints from "@/components/pause/TrustPoints";
 import { setCanonical } from "@/lib/canonical";
 import { homeSchema } from "@/lib/schema";
+import StrictBlockerIntro from "@/components/pause/StrictBlockerIntro";
 
-const schema = homeSchema(faqs.map((f) => ({ question: f.q, answer: f.a })));
+const schema = homeSchema(faqs.map((f) => ({ question: f.q, answer: faqAnswerText(f) })));
 const Index = () => {
   const { hash } = useLocation();
   useEffect(() => {
@@ -30,6 +31,7 @@ const Index = () => {
       <main>
         <Hero />
         <TrustPoints />
+        <StrictBlockerIntro />
         <CoreIdea />
         <RulesOverview />
         <HardMode />

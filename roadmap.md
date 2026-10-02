@@ -26,3 +26,11 @@
 - [x] Keep one canonical after hydration and remove keywords metadata
 - [x] Merge homepage schema into one linked graph
 - [x] Serve social preview metadata from pauseappblocker.com
+
+# Homepage refinement
+
+- [x] Add Organization sameAs field ready for verified profile URLs
+- [x] Add a short strict app blocker section before How it works
+- [x] Resize the hero screenshot and trim unused font weights
+- [x] Link relevant FAQ answers to articles while keeping schema text aligned
+- [ ] Replace draft section copy and fill Organization profile URLs when supplied by the owner
