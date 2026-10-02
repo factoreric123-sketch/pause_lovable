@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
@@ -183,7 +183,5 @@ const OpalAlternatives = () => {
   );
 };
 
-import { ArrowLeft } from "lucide-react";
-const ArrowLeftIcon = () => <ArrowLeft className="h-4 w-4" />;
-
 export default OpalAlternatives;
+
