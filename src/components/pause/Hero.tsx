@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 import rulesImage from "@/assets/app-rules.png";
 import { SITE } from "@/config/site";
 
@@ -10,7 +10,7 @@ const Hero = () => (
       aria-hidden="true"
     />
     <div className="relative mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
-      <motion.div
+      <Reveal
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
@@ -38,15 +38,15 @@ const Hero = () => (
           </a>
         </div>
         <p className="mt-5 text-sm text-muted-foreground">Free on iPhone. No account required.</p>
-      </motion.div>
+      </Reveal>
 
-      <motion.div
+      <Reveal
         initial={{ opacity: 0, y: 40, rotate: -2 }}
         animate={{ opacity: 1, y: 0, rotate: 0 }}
         transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
       >
         <img src={rulesImage} alt="Pause Rules screen with a morning schedule, Friction Lock, a daily time limit, and a Focus App List" width={1170} height={2532} className="mx-auto block h-auto w-full max-w-[260px] rounded-[2rem]" />
-      </motion.div>
+      </Reveal>
     </div>
   </section>
 );

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 import { Clock3, ListPlus } from "lucide-react";
 
 const flow = [
@@ -9,7 +9,7 @@ const flow = [
 const WhyItWorks = () => (
   <section className="border-t border-border/60 px-6 py-24 md:py-32">
     <div className="mx-auto max-w-4xl text-center">
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+      <Reveal initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <span className="section-label">Follow through</span>
         <h2 className="mt-4 font-display text-[clamp(2.2rem,5vw,3.5rem)] font-extrabold leading-[1.04] tracking-tight">
           Give your plan a chance to stick.
@@ -17,11 +17,11 @@ const WhyItWorks = () => (
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
           Make the decision once, before the urge to check. Pause applies the limits you chose while you get on with your day.
         </p>
-      </motion.div>
+      </Reveal>
 
       <div className="mt-14 grid gap-4 sm:grid-cols-2">
         {flow.map((step, i) => (
-          <motion.div
+          <Reveal
             key={step.label}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ const WhyItWorks = () => (
             </span>
             <h3 className="mt-4 font-display text-xl font-bold">{step.label}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{step.copy}</p>
-          </motion.div>
+          </Reveal>
         ))}
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 import PhoneFrame from "./PhoneFrame";
 
 interface RuleSectionProps {
@@ -30,7 +30,7 @@ const RuleSection = ({
 }: RuleSectionProps) => (
   <section id={id} className="scroll-mt-20 border-t border-border/60 px-6 py-24 md:py-28">
     <div className="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2">
-      <motion.div
+      <Reveal
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
@@ -75,9 +75,9 @@ const RuleSection = ({
         )}
 
         {footnote && <p className="mt-8 font-display text-xl font-semibold text-foreground">{footnote}</p>}
-      </motion.div>
+      </Reveal>
 
-      <motion.div
+      <Reveal
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
@@ -85,7 +85,7 @@ const RuleSection = ({
         className={reverse ? "md:order-1" : ""}
       >
         <PhoneFrame label={`iPhone showing the Pause ${ruleName} screen`}>{screen}</PhoneFrame>
-      </motion.div>
+      </Reveal>
     </div>
   </section>
 );

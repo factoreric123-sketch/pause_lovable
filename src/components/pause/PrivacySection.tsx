@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import Reveal from "@/components/pause/Reveal";
 import { CircleOff, Smartphone, UserRoundX, Waves } from "lucide-react";
 
 const points = [
@@ -10,7 +10,7 @@ const points = [
 
 const PrivacySection = () => (
   <section className="border-t border-border/60 px-6 py-24">
-    <motion.div
+    <Reveal
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -27,7 +27,7 @@ const PrivacySection = () => (
       >
         Read the privacy policy
       </a>
-    </motion.div>
+    </Reveal>
   </section>
 );
 
