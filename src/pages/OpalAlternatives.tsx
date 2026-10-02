@@ -110,7 +110,7 @@ const OpalAlternatives = () => {
 
           <h2>The best Opal alternatives for iPhone</h2>
 
-          <h3>Pause: free, closest match on enforcement</h3>
+          <h2>Pause: free, closest match on enforcement</h2>
           <p>
             <strong>Disclosure: we make Pause, so weigh this accordingly.</strong>
           </p>
@@ -118,16 +118,16 @@ const OpalAlternatives = () => {
           <p>The direct contrast: Opal's free tier gives you one rule and no Hard Mode. Pause gives you five rule types and strict enforcement at no cost.</p>
           <p>Where Opal is better: analytics, maturity, and a long review history. Pause is new.</p>
 
-          <h3>ScreenZen: best free friction-based blocker</h3>
+          <h2>ScreenZen: best free friction-based blocker</h2>
           <p>Delay timers and intention prompts before an app opens, with no subscription. The friction is gentle, so if you tap straight through prompts, it won't hold. A good free starting point if you want awareness rather than hard blocking.</p>
 
-          <h3>One sec: best for impulsive app opens</h3>
+          <h2>One sec: best for impulsive app opens</h2>
           <p>Forces a breathing pause before an app loads, at around $19.99 a year. The research on brief interruptions before app access is solid, but it interrupts impulse rather than stopping determination.</p>
 
-          <h3>AppBlock: best value paid alternative</h3>
+          <h2>AppBlock: best value paid alternative</h2>
           <p>Blocks apps and websites, with a Strict Mode that prevents editing your rules or uninstalling for a set period. Roughly $4.99 monthly, $29.99 yearly, or $89.99 lifetime, about a third of Opal's annual price for comparable blocking.</p>
 
-          <h3>Apple Screen Time: free and the weakest</h3>
+          <h2>Apple Screen Time: free and the weakest</h2>
           <p>
             Already on your phone. Hit your limit and iOS offers "Ignore Limit for Today," one tap away. Fine as a starting point, not a self-control tool.{" "}
             <Link to="/blog/remove-ignore-limit-screen-time" className="text-accent underline underline-offset-4 hover:text-foreground">
