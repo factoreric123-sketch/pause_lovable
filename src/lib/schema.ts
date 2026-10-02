@@ -5,12 +5,19 @@ import { getRoute, BLOG_POSTS } from "@/prerender-routes";
 export const ORIGIN = "https://pauseappblocker.com";
 export const LOGO_URL = `${ORIGIN}/android-chrome-512x512.png`;
 const abs = (path: string) => (path === "/" ? `${ORIGIN}/` : `${ORIGIN}${path}`);
-const org = { "@type": "Organization", name: "Pause", url: `${ORIGIN}/`, logo: LOGO_URL };
+const ids = {
+  organization: `${ORIGIN}/#organization`,
+  website: `${ORIGIN}/#website`,
+  software: `${ORIGIN}/#software-application`,
+  faq: `${ORIGIN}/#faq`,
+};
+const org = { "@type": "Organization", "@id": ids.organization, name: "Pause", url: `${ORIGIN}/`, logo: LOGO_URL };
 
 export interface Faq { question: string; answer: string }
 
-export const faqPage = (faqs: Faq[]) => ({
+export const faqPage = (faqs: Faq[], id?: string) => ({
   "@type": "FAQPage",
+  ...(id ? { "@id": id } : {}),
   mainEntity: faqs.map(({ question, answer }) => ({
     "@type": "Question",
     name: question,
@@ -23,6 +30,7 @@ export const homeSchema = (faqs: Faq[]) => ({
   "@graph": [
     {
       "@type": "SoftwareApplication",
+      "@id": ids.software,
       name: "Pause",
       operatingSystem: "iOS",
       applicationCategory: "ProductivityApplication",
@@ -30,10 +38,19 @@ export const homeSchema = (faqs: Faq[]) => ({
       url: `${ORIGIN}/`,
       installUrl: SITE_CONFIG.appStoreUrl,
       downloadUrl: SITE_CONFIG.appStoreUrl,
+      provider: { "@id": ids.organization },
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     },
     org,
-    faqPage(faqs),
+    {
+      "@type": "WebSite",
+      "@id": ids.website,
+      name: "Pause",
+      url: `${ORIGIN}/`,
+      publisher: { "@id": ids.organization },
+      mainEntity: { "@id": ids.software },
+    },
+    faqPage(faqs, ids.faq),
   ],
 });
 

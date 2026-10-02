@@ -53,7 +53,7 @@ const Faq = () => (
             <AccordionTrigger className="text-left font-display text-lg font-semibold hover:no-underline">
               {item.q}
             </AccordionTrigger>
-            <AccordionContent className="text-base leading-relaxed text-muted-foreground">{item.a}</AccordionContent>
+            <AccordionContent forceMount className="text-base leading-relaxed text-muted-foreground">{item.a}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
