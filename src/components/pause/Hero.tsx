@@ -45,7 +45,7 @@ const Hero = () => (
         animate={{ opacity: 1, y: 0, rotate: 0 }}
         transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
       >
-        <img src={rulesImage.url} alt="Pause Rules screen with a morning schedule, Friction Lock, a daily time limit, and a Focus App List" width={520} height={1125} fetchPriority="high" className="mx-auto block h-auto w-full max-w-[260px] rounded-[2rem]" />
+        <img src={`https://pauseappblocker.com${rulesImage.url}`} alt="Pause Rules screen with a morning schedule, Friction Lock, a daily time limit, and a Focus App List" width={520} height={1125} fetchPriority="high" className="mx-auto block h-auto w-full max-w-[260px] rounded-[2rem]" />
       </Reveal>
     </div>
   </section>
