@@ -11,7 +11,9 @@ const ids = {
   software: `${ORIGIN}/#software-application`,
   faq: `${ORIGIN}/#faq`,
 };
-const org = { "@type": "Organization", "@id": ids.organization, name: "Pause", url: `${ORIGIN}/`, logo: LOGO_URL };
+// Add verified developer and social profile URLs here when provided.
+const organizationProfiles: string[] = [];
+const org = { "@type": "Organization", "@id": ids.organization, name: "Pause", url: `${ORIGIN}/`, logo: LOGO_URL, sameAs: organizationProfiles };
 
 export interface Faq { question: string; answer: string }
 

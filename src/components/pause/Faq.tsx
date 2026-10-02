@@ -1,5 +1,6 @@
 import Reveal from "@/components/pause/Reveal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
 
 export const faqs = [
   {
@@ -13,6 +14,7 @@ export const faqs = [
   {
     q: "Can Pause block websites too?",
     a: "Yes. App Lists can include supported websites as well as apps.",
+    link: { to: "/blog/block-social-media-iphone", text: "See how to block social media apps and websites on iPhone." },
   },
   {
     q: "Will Pause block my calls or texts?",
@@ -21,6 +23,7 @@ export const faqs = [
   {
     q: "Why does Pause need Screen Time permission?",
     a: "Pause uses Apple's Screen Time APIs to apply the app and website restrictions you create. Without Screen Time permission, Pause cannot enforce those blocks.",
+    link: { to: "/blog/remove-ignore-limit-screen-time", text: "Read more about Screen Time's Ignore Limit option." },
   },
   {
     q: "How many apps can I add?",
@@ -36,6 +39,8 @@ export const faqs = [
   },
   { q: "What's the difference between unlocks and Strict Mode?", a: "Unlocks determine whether you can take ordinary breaks or leave a session early. Strict Mode locks session editing and App List changes until the session ends. Choose both before you start." },
 ];
+
+export const faqAnswerText = (item: (typeof faqs)[number]) => `${item.a}${"link" in item && item.link ? ` ${item.link.text}` : ""}`;
 
 const Faq = () => (
   <section id="faq" className="scroll-mt-20 border-t border-border/60 px-6 py-24 md:py-32">
@@ -53,7 +58,9 @@ const Faq = () => (
             <AccordionTrigger className="text-left font-display text-lg font-semibold hover:no-underline">
               {item.q}
             </AccordionTrigger>
-            <AccordionContent forceMount className="text-base leading-relaxed text-muted-foreground">{item.a}</AccordionContent>
+            <AccordionContent forceMount className="text-base leading-relaxed text-muted-foreground">
+              {item.a}{"link" in item && item.link ? <> <Link to={item.link.to} className="text-accent underline underline-offset-4 hover:text-foreground">{item.link.text}</Link></> : null}
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
