@@ -16,6 +16,7 @@ An App List is a group of selected apps and supported websites. Pause requires n
 - Download on the App Store: https://apps.apple.com/us/app/pause-app-blocker/id6805745768
 - Blog: https://pauseappblocker.com/blog
 - Opal Alternatives for iPhone (2026): Is It Worth $99 a Year?: https://pauseappblocker.com/blog/opal-alternatives
+- Brick Alternatives for iPhone (2026): Do You Need the Hardware?: https://pauseappblocker.com/blog/brick-alternatives
 - Can You Delete an App Blocker to Bypass It?: https://pauseappblocker.com/blog/delete-app-blocker-bypass-iphone
 - How to Remove Ignore Limit on Screen Time: https://pauseappblocker.com/blog/remove-ignore-limit-screen-time
 - Best App Blockers for iPhone (2026): https://pauseappblocker.com/blog/best-app-blockers-iphone
