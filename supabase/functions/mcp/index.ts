@@ -46,6 +46,7 @@ var get_site_links_default = defineTool2({
       blog: "https://pauseappblocker.com/blog",
       remove_ignore_limit_guide: "https://pauseappblocker.com/blog/remove-ignore-limit-screen-time",
       opal_alternatives: "https://pauseappblocker.com/blog/opal-alternatives",
+      brick_alternatives: "https://pauseappblocker.com/blog/brick-alternatives",
       contact: "https://pauseappblocker.com/contact",
       privacy_policy: "https://pauseappblocker.com/privacy-policy",
       terms: "https://pauseappblocker.com/terms",
