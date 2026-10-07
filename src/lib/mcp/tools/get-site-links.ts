@@ -13,6 +13,7 @@ export default defineTool({
       remove_ignore_limit_guide: "https://pauseappblocker.com/blog/remove-ignore-limit-screen-time",
       opal_alternatives: "https://pauseappblocker.com/blog/opal-alternatives",
       brick_alternatives: "https://pauseappblocker.com/blog/brick-alternatives",
+      jomo_alternatives: "https://pauseappblocker.com/blog/jomo-alternatives",
       contact: "https://pauseappblocker.com/contact",
       privacy_policy: "https://pauseappblocker.com/privacy-policy",
       terms: "https://pauseappblocker.com/terms",
