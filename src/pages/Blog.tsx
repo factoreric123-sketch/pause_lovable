@@ -37,6 +37,24 @@ const Blog = () => {
             <article className="surface-card surface-card-hover p-7 sm:p-9">
               <p className="text-sm font-semibold text-accent">App blockers</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
+                <Link to="/blog/jomo-alternatives" className="transition-colors hover:text-accent">
+                  Jomo Alternatives for iPhone (2026): When You Need a Block Without a Break
+                </Link>
+              </h3>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Jomo treats the break as a feature. Compare the alternatives worth trying when you keep taking it, Pause included.
+              </p>
+              <Link
+                to="/blog/jomo-alternatives"
+                className="mt-6 inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80"
+              >
+                Read article <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
+
+            <article className="surface-card surface-card-hover p-7 sm:p-9">
+              <p className="text-sm font-semibold text-accent">App blockers</p>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
                 <Link to="/blog/brick-alternatives" className="transition-colors hover:text-accent">
                   Brick Alternatives for iPhone (2026): Do You Need the Hardware?
                 </Link>
