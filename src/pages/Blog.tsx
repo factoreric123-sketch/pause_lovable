@@ -37,6 +37,24 @@ const Blog = () => {
             <article className="surface-card surface-card-hover p-7 sm:p-9">
               <p className="text-sm font-semibold text-accent">App blockers</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
+                <Link to="/blog/app-blockers-adhd" className="transition-colors hover:text-accent">
+                  Best App Blockers for ADHD on iPhone (2026): Why Most Fail and What Works
+                </Link>
+              </h3>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Why most blockers ask for focus at the worst moment, what an ADHD friendly blocker needs, and how to set one up so it sticks.
+              </p>
+              <Link
+                to="/blog/app-blockers-adhd"
+                className="mt-6 inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80"
+              >
+                Read article <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
+
+            <article className="surface-card surface-card-hover p-7 sm:p-9">
+              <p className="text-sm font-semibold text-accent">App blockers</p>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
                 <Link to="/blog/jomo-alternatives" className="transition-colors hover:text-accent">
                   Jomo Alternatives for iPhone (2026): When You Need a Block Without a Break
                 </Link>

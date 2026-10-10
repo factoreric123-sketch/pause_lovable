@@ -17,6 +17,7 @@ import BlockSocialMediaIphone from "./pages/BlockSocialMediaIphone";
 import OpalAlternatives from "./pages/OpalAlternatives";
 import BrickAlternatives from "./pages/BrickAlternatives";
 import JomoAlternatives from "./pages/JomoAlternatives";
+import AppBlockersAdhd from "./pages/AppBlockersAdhd";
 import NotFound from "./pages/NotFound";
 
 const AppShell = () => {
@@ -38,6 +39,7 @@ const AppShell = () => {
           <Route path="/blog/opal-alternatives" element={<OpalAlternatives />} />
           <Route path="/blog/brick-alternatives" element={<BrickAlternatives />} />
           <Route path="/blog/jomo-alternatives" element={<JomoAlternatives />} />
+          <Route path="/blog/app-blockers-adhd" element={<AppBlockersAdhd />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
