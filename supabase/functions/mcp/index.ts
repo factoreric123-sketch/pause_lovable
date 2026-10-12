@@ -49,6 +49,7 @@ var get_site_links_default = defineTool2({
       brick_alternatives: "https://pauseappblocker.com/blog/brick-alternatives",
       jomo_alternatives: "https://pauseappblocker.com/blog/jomo-alternatives",
       app_blockers_adhd: "https://pauseappblocker.com/blog/app-blockers-adhd",
+      stop_scrolling_at_night: "https://pauseappblocker.com/blog/stop-scrolling-at-night",
       contact: "https://pauseappblocker.com/contact",
       privacy_policy: "https://pauseappblocker.com/privacy-policy",
       terms: "https://pauseappblocker.com/terms",
