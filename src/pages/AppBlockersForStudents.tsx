@@ -42,6 +42,9 @@ const AppBlockersForStudents = () => {
 
         <article className="blog-content mt-10">
           <header className="border-b border-border pb-10">
+            <p className="section-label">App blockers</p>
+            <h1>{getRoute(path).headline}</h1>
+          </header>
 
           <p>Most advice about blocking your phone while studying misses the obvious problem. You need your phone to study.</p>
           <p>The timer is on it. So are your notes, the calculator, your flashcards, the lecture PDF and the group chat where someone has posted the past paper. Block everything and you break your own study session within ten minutes, so you unblock it, and then you are in Instagram.</p>
