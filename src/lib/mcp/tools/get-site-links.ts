@@ -16,6 +16,7 @@ export default defineTool({
       jomo_alternatives: "https://pauseappblocker.com/blog/jomo-alternatives",
       app_blockers_adhd: "https://pauseappblocker.com/blog/app-blockers-adhd",
       stop_scrolling_at_night: "https://pauseappblocker.com/blog/stop-scrolling-at-night",
+      app_blockers_for_students: "https://pauseappblocker.com/blog/app-blockers-for-students",
       contact: "https://pauseappblocker.com/contact",
       privacy_policy: "https://pauseappblocker.com/privacy-policy",
       terms: "https://pauseappblocker.com/terms",
