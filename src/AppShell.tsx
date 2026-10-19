@@ -20,6 +20,7 @@ import JomoAlternatives from "./pages/JomoAlternatives";
 import AppBlockersAdhd from "./pages/AppBlockersAdhd";
 import StopScrollingAtNight from "./pages/StopScrollingAtNight";
 import AppBlockersForStudents from "./pages/AppBlockersForStudents";
+import BlockRedditIphone from "./pages/BlockRedditIphone";
 import NotFound from "./pages/NotFound";
 
 const AppShell = () => {
@@ -44,6 +45,7 @@ const AppShell = () => {
           <Route path="/blog/app-blockers-adhd" element={<AppBlockersAdhd />} />
           <Route path="/blog/stop-scrolling-at-night" element={<StopScrollingAtNight />} />
           <Route path="/blog/app-blockers-for-students" element={<AppBlockersForStudents />} />
+          <Route path="/blog/block-reddit-iphone" element={<BlockRedditIphone />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />

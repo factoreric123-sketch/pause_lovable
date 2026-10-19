@@ -51,6 +51,7 @@ var get_site_links_default = defineTool2({
       app_blockers_adhd: "https://pauseappblocker.com/blog/app-blockers-adhd",
       stop_scrolling_at_night: "https://pauseappblocker.com/blog/stop-scrolling-at-night",
       app_blockers_for_students: "https://pauseappblocker.com/blog/app-blockers-for-students",
+      block_reddit_iphone: "https://pauseappblocker.com/blog/block-reddit-iphone",
       contact: "https://pauseappblocker.com/contact",
       privacy_policy: "https://pauseappblocker.com/privacy-policy",
       terms: "https://pauseappblocker.com/terms",
