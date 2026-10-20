@@ -57,13 +57,31 @@ const BrickVsOpal = () => {
 
           <h2>The cost nobody compounds</h2>
           <p>Every comparison lists these prices side by side. Almost none of them run the numbers forward.</p>
-          <div className="my-8 overflow-x-auto">
-            <table>
-              <thead><tr><th></th><th>Brick</th><th>Opal (annual)</th></tr></thead>
+          <div className="my-10 overflow-x-auto">
+            <table className="w-full border-collapse text-left text-sm sm:text-base">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="py-3 pr-4 font-semibold text-foreground">Total cost</th>
+                  <th className="py-3 pr-4 font-semibold text-foreground">Brick</th>
+                  <th className="py-3 font-semibold text-foreground">Opal (annual)</th>
+                </tr>
+              </thead>
               <tbody>
-                <tr><td>Year 1</td><td>$59</td><td>$99.99</td></tr>
-                <tr><td>After 3 years</td><td>$59</td><td>$299.97</td></tr>
-                <tr><td>After 5 years</td><td>$59</td><td>$499.95</td></tr>
+                <tr className="border-b border-border/60">
+                  <td className="py-3 pr-4 font-semibold text-foreground">Year 1</td>
+                  <td className="py-3 pr-4 text-muted-foreground">$59</td>
+                  <td className="py-3 text-muted-foreground">$99.99</td>
+                </tr>
+                <tr className="border-b border-border/60">
+                  <td className="py-3 pr-4 font-semibold text-foreground">After 3 years</td>
+                  <td className="py-3 pr-4 text-muted-foreground">$59</td>
+                  <td className="py-3 text-muted-foreground">$299.97</td>
+                </tr>
+                <tr className="border-b border-border/60">
+                  <td className="py-3 pr-4 font-semibold text-foreground">After 5 years</td>
+                  <td className="py-3 pr-4 text-muted-foreground">$59</td>
+                  <td className="py-3 text-muted-foreground">$499.95</td>
+                </tr>
               </tbody>
             </table>
           </div>
