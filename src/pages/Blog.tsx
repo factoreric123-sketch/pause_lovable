@@ -37,6 +37,23 @@ const Blog = () => {
             <article className="surface-card surface-card-hover p-7 sm:p-9">
               <p className="text-sm font-semibold text-accent">App blockers</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
+                <Link to="/blog/opal-vs-freedom" className="transition-colors hover:text-accent">
+                  Opal vs Freedom (2026): iPhone Only or Every Device?
+                </Link>
+              </h3>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Price, free tiers and platform coverage compared: when Opal's iPhone focus wins and when Freedom's four-platform plan is worth it.
+              </p>
+              <Link
+                to="/blog/opal-vs-freedom"
+                className="mt-6 inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80"
+              >
+                Read article <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
+
+              <p className="text-sm font-semibold text-accent">App blockers</p>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
                 <Link to="/blog/brick-vs-opal" className="transition-colors hover:text-accent">
                   Brick vs Opal (2026): $59 Once or $99 Every Year?
                 </Link>
