@@ -17,6 +17,7 @@ export default defineTool({
       app_blockers_adhd: "https://pauseappblocker.com/blog/app-blockers-adhd",
       stop_scrolling_at_night: "https://pauseappblocker.com/blog/stop-scrolling-at-night",
       app_blockers_for_students: "https://pauseappblocker.com/blog/app-blockers-for-students",
+      opal_vs_freedom: "https://pauseappblocker.com/blog/opal-vs-freedom",
       brick_vs_opal: "https://pauseappblocker.com/blog/brick-vs-opal",
       block_reddit_iphone: "https://pauseappblocker.com/blog/block-reddit-iphone",
       contact: "https://pauseappblocker.com/contact",
