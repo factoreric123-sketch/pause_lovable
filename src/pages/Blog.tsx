@@ -52,6 +52,7 @@ const Blog = () => {
               </Link>
             </article>
 
+            <article className="surface-card surface-card-hover p-7 sm:p-9">
               <p className="text-sm font-semibold text-accent">App blockers</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
                 <Link to="/blog/brick-vs-opal" className="transition-colors hover:text-accent">
