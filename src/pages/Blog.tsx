@@ -35,6 +35,24 @@ const Blog = () => {
           <h2 id="latest-articles" className="text-2xl font-bold">Latest</h2>
           <div className="mt-6 grid max-w-3xl gap-6">
             <article className="surface-card surface-card-hover p-7 sm:p-9">
+              <p className="text-sm font-semibold text-accent">How it works</p>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
+                <Link to="/blog/how-app-blockers-work-iphone" className="transition-colors hover:text-accent">
+                  How App Blockers Actually Work on iPhone (2026)
+                </Link>
+              </h3>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                What Apple's Screen Time framework lets a blocker do, why no blocker is truly unbypassable, and the three questions that predict whether one will hold.
+              </p>
+              <Link
+                to="/blog/how-app-blockers-work-iphone"
+                className="mt-6 inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80"
+              >
+                Read article <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
+
+            <article className="surface-card surface-card-hover p-7 sm:p-9">
               <p className="text-sm font-semibold text-accent">App blockers</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
                 <Link to="/blog/opal-vs-freedom" className="transition-colors hover:text-accent">

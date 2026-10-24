@@ -15,6 +15,7 @@ An App List is a group of selected apps and supported websites. Pause requires n
 - Home: https://pauseappblocker.com/
 - Download on the App Store: https://apps.apple.com/us/app/pause-app-blocker/id6805745768
 - Blog: https://pauseappblocker.com/blog
+- How App Blockers Actually Work on iPhone (2026): https://pauseappblocker.com/blog/how-app-blockers-work-iphone
 - Opal vs Freedom (2026): iPhone Only or Every Device?: https://pauseappblocker.com/blog/opal-vs-freedom
 - Brick vs Opal (2026): $59 Once or $99 Every Year?: https://pauseappblocker.com/blog/brick-vs-opal
 - How to Block Reddit on iPhone (App and Website): https://pauseappblocker.com/blog/block-reddit-iphone
