@@ -24,6 +24,7 @@ import BlockRedditIphone from "./pages/BlockRedditIphone";
 import BrickVsOpal from "./pages/BrickVsOpal";
 import OpalVsFreedom from "./pages/OpalVsFreedom";
 import HowAppBlockersWorkIphone from "./pages/HowAppBlockersWorkIphone";
+import ReduceScreenTimeNewYear from "./pages/ReduceScreenTimeNewYear";
 import NotFound from "./pages/NotFound";
 
 const AppShell = () => {
@@ -52,6 +53,7 @@ const AppShell = () => {
           <Route path="/blog/brick-vs-opal" element={<BrickVsOpal />} />
           <Route path="/blog/opal-vs-freedom" element={<OpalVsFreedom />} />
           <Route path="/blog/how-app-blockers-work-iphone" element={<HowAppBlockersWorkIphone />} />
+          <Route path="/blog/reduce-screen-time-new-year" element={<ReduceScreenTimeNewYear />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
