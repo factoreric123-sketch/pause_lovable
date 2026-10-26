@@ -51,6 +51,7 @@ var get_site_links_default = defineTool2({
       app_blockers_adhd: "https://pauseappblocker.com/blog/app-blockers-adhd",
       stop_scrolling_at_night: "https://pauseappblocker.com/blog/stop-scrolling-at-night",
       app_blockers_for_students: "https://pauseappblocker.com/blog/app-blockers-for-students",
+      reduce_screen_time_new_year: "https://pauseappblocker.com/blog/reduce-screen-time-new-year",
       how_app_blockers_work_iphone: "https://pauseappblocker.com/blog/how-app-blockers-work-iphone",
       opal_vs_freedom: "https://pauseappblocker.com/blog/opal-vs-freedom",
       brick_vs_opal: "https://pauseappblocker.com/blog/brick-vs-opal",
