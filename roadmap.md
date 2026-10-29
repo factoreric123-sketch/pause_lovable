@@ -40,4 +40,4 @@
 # Instagram guide
 
 - [x] Add uploaded article, exact metadata, FAQ schema and discovery links
-- [ ] Verify article navigation and rendered content
+- [x] Verify article navigation and rendered content
