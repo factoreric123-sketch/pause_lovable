@@ -36,3 +36,8 @@
 - [x] Resize the hero screenshot and trim unused font weights
 - [x] Link relevant FAQ answers to articles while keeping schema text aligned
 - [ ] Replace draft section copy and fill Organization profile URLs when supplied by the owner
+
+# Instagram guide
+
+- [x] Add uploaded article, exact metadata, FAQ schema and discovery links
+- [x] Verify article navigation and rendered content
