@@ -2,6 +2,7 @@
 export interface RouteMeta { path: string; title: string; description: string; type: "website" | "article"; headline?: string; datePublished?: string; dateModified?: string }
 
 export const PRERENDER_ROUTES: RouteMeta[] = [
+  {"path": "/blog/block-tiktok-iphone", "type": "article", "headline": "How to Block TikTok on iPhone (App and Website)", "datePublished": "2026-10-30", "dateModified": "2026-10-30", "title": "How to Block TikTok on iPhone (App and Website)", "description": "Blocking the TikTok app leaves tiktok.com open in Safari, and TikTok's own screen time limits can be dismissed. Here is how to block TikTok properly, free."},
   {"path": "/blog/block-instagram-iphone", "type": "article", "headline": "How to Block Instagram on iPhone (Including Threads)", "datePublished": "2026-10-29", "dateModified": "2026-10-29", "title": "How to Block Instagram on iPhone (Including Threads)", "description": "Blocking the Instagram app leaves instagram.com and Threads wide open. Here is how to block Instagram properly on iPhone, free, including the parts guides miss."},
   { path: "/", type: "website", title: "Pause – Strict App & Website Blocker for iPhone", description: "Download Pause free on iPhone to block distracting apps and websites with focus sessions, daily limits, and challenges before access." },
   { path: "/blog", type: "website", title: "Pause Blog | Screen Time That Actually Holds", description: "Practical guides to blocking distracting apps and websites, closing Screen Time loopholes, and making your limits harder to undo." },
