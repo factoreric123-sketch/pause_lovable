@@ -94,7 +94,7 @@ const StopCheckingPhoneAtWork = () => {
           <ul>
             <li><Link to="/blog/block-social-media-iphone" className={linkClass}>How to block social media on iPhone</Link>, including the browser versions most guides forget.</li>
             <li><Link to="/blog/stop-scrolling-at-night" className={linkClass}>How to stop scrolling in bed at night</Link>, if the problem follows you past working hours.</li>
-            <li><Link to="/blog/remove-ignore-limit-screen-time" className={linkClass}>How to remove “Ignore Limit” on Screen Time</a></li>, if you are using Apple’s built-in tools instead.
+            <li><Link to="/blog/remove-ignore-limit-screen-time" className={linkClass}>How to remove “Ignore Limit” on Screen Time</Link>, if you are using Apple’s built-in tools instead.</li>
           </ul>
 
           <h2>FAQs</h2>

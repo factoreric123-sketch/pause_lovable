@@ -35,6 +35,21 @@ const Blog = () => {
           <h2 id="latest-articles" className="text-2xl font-bold">Latest</h2>
           <div className="mt-6 grid max-w-3xl gap-6">
             <article className="surface-card surface-card-hover p-7 sm:p-9">
+              <p className="text-sm font-semibold text-accent">Focus</p>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
+                <Link to="/blog/stop-checking-phone-at-work" className="transition-colors hover:text-accent">
+                  How to Stop Checking Your Phone at Work
+                </Link>
+              </h3>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                Working from home removed the one thing that kept you off your phone at a desk. Here is why quick checks cost more than the minutes, and the setup that holds.
+              </p>
+              <Link to="/blog/stop-checking-phone-at-work" className="mt-6 inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80">
+                Read article <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
+
+            <article className="surface-card surface-card-hover p-7 sm:p-9">
               <p className="text-sm font-semibold text-accent">Social media</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
                 <Link to="/blog/block-tiktok-iphone" className="transition-colors hover:text-accent">
