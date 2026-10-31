@@ -27,6 +27,7 @@ import HowAppBlockersWorkIphone from "./pages/HowAppBlockersWorkIphone";
 import ReduceScreenTimeNewYear from "./pages/ReduceScreenTimeNewYear";
 import BlockInstagramIphone from "./pages/BlockInstagramIphone";
 import BlockTiktokIphone from "./pages/BlockTiktokIphone";
+import StopCheckingPhoneAtWork from "./pages/StopCheckingPhoneAtWork";
 import NotFound from "./pages/NotFound";
 
 const AppShell = () => {
@@ -43,6 +44,7 @@ const AppShell = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/block-instagram-iphone" element={<BlockInstagramIphone />} />
           <Route path="/blog/block-tiktok-iphone" element={<BlockTiktokIphone />} />
+          <Route path="/blog/stop-checking-phone-at-work" element={<StopCheckingPhoneAtWork />} />
           <Route path="/blog/remove-ignore-limit-screen-time" element={<RemoveIgnoreLimitScreenTime />} />
           <Route path="/blog/delete-app-blocker-bypass-iphone" element={<DeleteAppBlockerBypassIphone />} />
           <Route path="/blog/best-app-blockers-iphone" element={<BestAppBlockersIphone />} />

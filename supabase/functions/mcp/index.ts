@@ -42,6 +42,7 @@ var get_site_links_default = defineTool2({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const links = {
+      stop_checking_phone_at_work: "https://pauseappblocker.com/blog/stop-checking-phone-at-work",
       block_tiktok_iphone: "https://pauseappblocker.com/blog/block-tiktok-iphone",
       block_instagram_iphone: "https://pauseappblocker.com/blog/block-instagram-iphone",
       home: "https://pauseappblocker.com/",
