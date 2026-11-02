@@ -45,4 +45,4 @@
 # Screen Time troubleshooting article
 
 - [x] Add uploaded article, exact metadata, FAQs and discovery links
-- [ ] Verify article navigation, layout and metadata
+- [x] Verify article navigation, layout and metadata
