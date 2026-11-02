@@ -28,6 +28,7 @@ import ReduceScreenTimeNewYear from "./pages/ReduceScreenTimeNewYear";
 import BlockInstagramIphone from "./pages/BlockInstagramIphone";
 import BlockTiktokIphone from "./pages/BlockTiktokIphone";
 import StopCheckingPhoneAtWork from "./pages/StopCheckingPhoneAtWork";
+import ScreenTimeNotWorking from "./pages/ScreenTimeNotWorking";
 import NotFound from "./pages/NotFound";
 
 const AppShell = () => {
@@ -42,6 +43,7 @@ const AppShell = () => {
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/screen-time-not-working" element={<ScreenTimeNotWorking />} />
           <Route path="/blog/block-instagram-iphone" element={<BlockInstagramIphone />} />
           <Route path="/blog/block-tiktok-iphone" element={<BlockTiktokIphone />} />
           <Route path="/blog/stop-checking-phone-at-work" element={<StopCheckingPhoneAtWork />} />
