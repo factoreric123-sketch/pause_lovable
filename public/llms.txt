@@ -12,6 +12,7 @@
 An App List is a group of selected apps and supported websites. Pause requires no account, shows no ads, and is available free on the iPhone App Store.
 
 ## Pages
+- Screen Time Not Working on iPhone? Here's Why: https://pauseappblocker.com/blog/screen-time-not-working
 - How to Stop Checking Your Phone at Work: https://pauseappblocker.com/blog/stop-checking-phone-at-work
 - How to Block TikTok on iPhone (App and Website): https://pauseappblocker.com/blog/block-tiktok-iphone
 - How to Block Instagram on iPhone (Including Threads): https://pauseappblocker.com/blog/block-instagram-iphone

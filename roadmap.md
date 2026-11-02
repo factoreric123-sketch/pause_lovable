@@ -41,3 +41,8 @@
 
 - [x] Add uploaded article, exact metadata, FAQ schema and discovery links
 - [x] Verify article navigation and rendered content
+
+# Screen Time troubleshooting article
+
+- [x] Add uploaded article, exact metadata, FAQs and discovery links
+- [x] Verify article navigation, layout and metadata
