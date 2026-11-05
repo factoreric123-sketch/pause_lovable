@@ -35,6 +35,20 @@ const Blog = () => {
           <h2 id="latest-articles" className="text-2xl font-bold">Latest</h2>
           <div className="mt-6 grid max-w-3xl gap-6">
             <article className="surface-card surface-card-hover p-7 sm:p-9">
+              <p className="text-sm font-semibold text-accent">App blockers</p>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
+                <Link to="/blog/app-blocker-you-cant-delete" className="transition-colors hover:text-accent">
+                  App Blocker You Can't Delete: What iPhone Really Allows
+                </Link>
+              </h3>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                An iPhone app blocker can stop you deleting it, but only during a session and only by blocking all app deletion. Here is where each layer breaks.
+              </p>
+              <Link to="/blog/app-blocker-you-cant-delete" className="mt-6 inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80">
+                Read article <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
+            <article className="surface-card surface-card-hover p-7 sm:p-9">
               <p className="text-sm font-semibold text-accent">Screen Time</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
                 <Link to="/blog/screen-time-not-working" className="transition-colors hover:text-accent">
