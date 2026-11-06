@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import icon from "@/assets/pause-bars.png";
+import startupbaseBadge from "@/assets/startupbase-launch.svg.asset.json";
 import { SITE } from "@/config/site";
 import { AppleGlyph } from "./AppStoreBadge";
 
@@ -21,6 +22,20 @@ const Footer = () => (
           >
             <AppleGlyph className="h-4 w-4" />
             {SITE.ctaLabel}
+          </a>
+          <a
+            href="https://startupbase.io/products/pause-app-blocker?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 block w-fit max-w-full"
+          >
+            <img
+              src={startupbaseBadge.url}
+              alt="Launched on StartupBase"
+              height={55}
+              className="h-[55px] w-auto max-w-full"
+              loading="lazy"
+            />
           </a>
         </div>
 
