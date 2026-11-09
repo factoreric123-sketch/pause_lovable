@@ -46,3 +46,8 @@
 
 - [x] Add uploaded article, exact metadata, FAQs and discovery links
 - [x] Verify article navigation, layout and metadata
+
+# App blocker research article
+
+- [x] Add uploaded article, exact metadata, six FAQs and discovery links
+- [ ] Verify article navigation, layout and metadata
