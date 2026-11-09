@@ -50,4 +50,4 @@
 # App blocker research article
 
 - [x] Add uploaded article, exact metadata, six FAQs and discovery links
-- [ ] Verify article navigation, layout and metadata
+- [x] Verify article navigation, layout and metadata
