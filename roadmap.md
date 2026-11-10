@@ -54,5 +54,5 @@
 
 # Reading habit article
 
-- [ ] Add uploaded article, exact metadata, six FAQs and discovery links
-- [ ] Verify article navigation, layout and metadata
+- [x] Add uploaded article, exact metadata, six FAQs and discovery links
+- [x] Verify article navigation, layout and metadata
