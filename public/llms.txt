@@ -12,6 +12,7 @@
 An App List is a group of selected apps and supported websites. Pause requires no account, shows no ads, and is available free on the iPhone App Store.
 
 ## Pages
+- Why You Pick Up Your Phone Instead of Reading a Book: https://pauseappblocker.com/blog/phone-instead-of-reading
 - Do App Blockers Actually Work? What Studies Show (2026): https://pauseappblocker.com/blog/do-app-blockers-work
 - App Blocker You Can't Delete: What iPhone Really Allows: https://pauseappblocker.com/blog/app-blocker-you-cant-delete
 - Screen Time Not Working on iPhone? Here's Why: https://pauseappblocker.com/blog/screen-time-not-working
