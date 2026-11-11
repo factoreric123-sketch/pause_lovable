@@ -14,20 +14,6 @@ const DEFAULT_URLS = [
   "/life-in-dots",
 ];
 
-function parseJwtClaims(token: string): Record<string, unknown> | null {
-  const parts = token.split(".");
-  if (parts.length < 2) return null;
-  try {
-    const payload = parts[1]
-      .replaceAll("-", "+")
-      .replaceAll("_", "/")
-      .padEnd(Math.ceil(parts[1].length / 4) * 4, "=");
-    return JSON.parse(atob(payload)) as Record<string, unknown>;
-  } catch {
-    return null;
-  }
-}
-
 // Only server-to-server callers holding the service_role key may submit URLs.
 function isServiceRole(req: Request): boolean {
   const token = req.headers.get("Authorization")?.replace(/^Bearer\s+/i, "") ?? "";
