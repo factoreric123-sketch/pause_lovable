@@ -56,3 +56,9 @@
 
 - [x] Add uploaded article, exact metadata, six FAQs and discovery links
 - [x] Verify article navigation, layout and metadata
+
+
+# Browser-blocking article
+
+- [x] Add uploaded article, exact metadata, six FAQs and discovery links
+- [x] Verify article navigation, desktop/mobile layout and metadata
