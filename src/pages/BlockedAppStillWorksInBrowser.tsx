@@ -12,16 +12,28 @@ const path = "/blog/blocked-app-still-works-in-browser";
 const { title, description } = getRoute(path);
 const faqs = [
   {
-    "question": "Why can I still use a blocked app in the browser? (H3)\nBecause app limits and website restrictions are separate controls. Blocking the app stops the app only. The website version needs to be blocked separately under Content and Privacy Restrictions, Web Content, and even then only Safari is covered.",
-    "answer": "Does Screen Time block websites in Chrome? (H3)\nNo, not in the way it does in Safari. Screen Time’s web content filtering applies to Safari, and third-party browsers like Chrome, Firefox, and Brave do not receive the same restrictions. Apple’s developer forums carry long-running discussions about exactly this. The practical answer is to restrict or remove those browsers rather than trying to filter them."
+    "question": "Why can I still use a blocked app in the browser?",
+    "answer": "Because app limits and website restrictions are separate controls. Blocking the app stops the app only. The website version needs to be blocked separately under Content and Privacy Restrictions, Web Content, and even then only Safari is covered."
   },
   {
-    "question": "How do I block a website on iPhone permanently? (H3)\nSettings, Screen Time, Content and Privacy Restrictions, Content Restrictions, Web Content, Limit Adult Websites, then add the URL under Never Allow. Lock it with a Screen Time passcode; otherwise, it can be undone in seconds. Remember this covers Safari, so an unrestricted browser elsewhere will defeat it.",
-    "answer": "Why does a blocked site still open when I tap a link in a message? (H3)\nMany messaging and email apps open links in their own built-in browser rather than handing them to Safari, which puts the page outside Safari’s restrictions. If this is how you keep reaching the site, the messaging app itself needs a limit during the hours that matter."
+    "question": "Does Screen Time block websites in Chrome?",
+    "answer": "No, not in the way it does in Safari. Screen Time’s web content filtering applies to Safari, and third-party browsers like Chrome, Firefox, and Brave do not receive the same restrictions. Apple’s developer forums carry long-running discussions about exactly this. The practical answer is to restrict or remove those browsers rather than trying to filter them."
   },
   {
-    "question": "Can any iPhone app blocker block websites properly?  (H3)\nPartially. Some use a Safari extension or route traffic through their own controlled browser, which covers more ground than Screen Time alone. None of them can filter inside Chrome or Firefox, because iOS does not expose that to apps. Treat broad “blocks all websites” claims with suspicion.",
-    "answer": "Is there a way to make this completely airtight on iPhone? (H3)\nNot for the phone’s owner. You can remove every browser but Safari, filter Safari, limit apps with built-in browsers, and lock it behind a passcode someone else holds. That is close. It is not airtight because the owner of an iPhone can always change settings, and Apple designed it that way deliberately."
+    "question": "How do I block a website on iPhone permanently?",
+    "answer": "Settings, Screen Time, Content and Privacy Restrictions, Content Restrictions, Web Content, Limit Adult Websites, then add the URL under Never Allow. Lock it with a Screen Time passcode; otherwise, it can be undone in seconds. Remember this covers Safari, so an unrestricted browser elsewhere will defeat it."
+  },
+  {
+    "question": "Why does a blocked site still open when I tap a link in a message?",
+    "answer": "Many messaging and email apps open links in their own built-in browser rather than handing them to Safari, which puts the page outside Safari’s restrictions. If this is how you keep reaching the site, the messaging app itself needs a limit during the hours that matter."
+  },
+  {
+    "question": "Can any iPhone app blocker block websites properly?",
+    "answer": "Partially. Some use a Safari extension or route traffic through their own controlled browser, which covers more ground than Screen Time alone. None of them can filter inside Chrome or Firefox, because iOS does not expose that to apps. Treat broad “blocks all websites” claims with suspicion."
+  },
+  {
+    "question": "Is there a way to make this completely airtight on iPhone?",
+    "answer": "Not for the phone’s owner. You can remove every browser but Safari, filter Safari, limit apps with built-in browsers, and lock it behind a passcode someone else holds. That is close. It is not airtight because the owner of an iPhone can always change settings, and Apple designed it that way deliberately."
   }
 ];
 const schema = blogPostSchema(path, faqs);
