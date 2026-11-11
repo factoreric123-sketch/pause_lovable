@@ -8,6 +8,7 @@ export default defineTool({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const links = {
+      blocked_app_still_works_in_browser: "https://pauseappblocker.com/blog/blocked-app-still-works-in-browser",
       phone_instead_of_reading: "https://pauseappblocker.com/blog/phone-instead-of-reading",
       do_app_blockers_work: "https://pauseappblocker.com/blog/do-app-blockers-work",
       app_blocker_you_cant_delete: "https://pauseappblocker.com/blog/app-blocker-you-cant-delete",
