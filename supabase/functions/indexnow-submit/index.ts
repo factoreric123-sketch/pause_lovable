@@ -33,8 +33,7 @@ function isServiceRole(req: Request): boolean {
   const token = req.headers.get("Authorization")?.replace(/^Bearer\s+/i, "") ?? "";
   if (!token) return false;
   const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
-  if (serviceKey && token === serviceKey) return true;
-  return parseJwtClaims(token)?.role === "service_role";
+  return Boolean(serviceKey) && token === serviceKey;
 }
 
 // Returns an absolute URL on this site, or null when the input points elsewhere.

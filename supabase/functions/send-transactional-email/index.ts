@@ -55,6 +55,16 @@ Deno.serve(async (req) => {
     )
   }
 
+  // Only trusted server-side callers holding the service role key may send.
+  const callerToken =
+    req.headers.get('Authorization')?.replace(/^Bearer\s+/i, '') ?? ''
+  if (!callerToken || callerToken !== supabaseServiceKey) {
+    return new Response(JSON.stringify({ error: 'Forbidden' }), {
+      status: 403,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    })
+  }
+
   // Parse request body
   let templateName: string
   let recipientEmail: string
@@ -136,7 +146,6 @@ Deno.serve(async (req) => {
   if (suppressionError) {
     console.error('Suppression check failed — refusing to send', {
       error: suppressionError,
-      effectiveRecipient,
     })
     return new Response(
       JSON.stringify({ error: 'Failed to verify suppression status' }),
@@ -156,7 +165,7 @@ Deno.serve(async (req) => {
       status: 'suppressed',
     })
 
-    console.log('Email suppressed', { effectiveRecipient, templateName })
+    console.log('Email suppressed', { templateName })
     return new Response(
       JSON.stringify({ success: false, reason: 'email_suppressed' }),
       {
@@ -348,7 +357,7 @@ Deno.serve(async (req) => {
     })
   }
 
-  console.log('Transactional email enqueued', { templateName, effectiveRecipient })
+  console.log('Transactional email enqueued', { templateName })
 
   return new Response(
     JSON.stringify({ success: true, queued: true }),
