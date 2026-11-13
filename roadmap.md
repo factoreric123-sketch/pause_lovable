@@ -72,4 +72,4 @@
 
 - [x] Check requested article URLs and add available contextual links
 - [x] Merge all 19 FAQs with linked WebSite and Organization nodes without changing route metadata
-- [ ] Verify raw HTML, schema consistency and accordion visibility
+- [x] Verify raw HTML, schema consistency and accordion visibility
