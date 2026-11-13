@@ -1,5 +1,13 @@
 import Reveal from "@/components/pause/Reveal";
+import { Link } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+const faqLinks: Record<string, { href: string; text: string }> = {
+  "Can an app blocker stop me from deleting it?": { href: "/blog/app-blocker-you-cant-delete", text: "Read what iPhone allows app blockers to do about deletion." },
+  "Do app blockers actually work?": { href: "/blog/do-app-blockers-work", text: "Explore the research on whether app blockers work." },
+  "Why can I still open a blocked app in Safari or Chrome?": { href: "/blog/blocked-app-still-works-in-browser", text: "Learn why blocked apps still work in browsers and how to close the gap." },
+  "Is Pause a free alternative to Opal?": { href: "/blog/opal-alternatives", text: "Compare Pause and other iPhone alternatives to Opal." },
+};
 
 export const faqGroups = [
   {
@@ -91,7 +99,10 @@ export const faqGroups = [
 ];
 
 export const faqs = faqGroups.flatMap((group) => group.items);
-export const faqAnswerText = (item: (typeof faqs)[number]) => item.a;
+export const faqAnswerText = (item: (typeof faqs)[number]) => {
+  const link = faqLinks[item.q];
+  return link ? `${item.a} ${link.text}` : item.a;
+};
 
 const Faq = () => (
   <section id="faq" className="scroll-mt-20 px-6 pb-24 pt-32 md:pb-32 md:pt-40">
@@ -114,6 +125,9 @@ const Faq = () => (
                 </AccordionTrigger>
                 <AccordionContent forceMount className="text-base leading-relaxed text-muted-foreground">
                   {item.a}
+                  {faqLinks[item.q] && (
+                    <> <Link to={faqLinks[item.q].href} className="text-primary underline underline-offset-4">{faqLinks[item.q].text}</Link></>
+                  )}
                 </AccordionContent>
               </AccordionItem>
             ))}

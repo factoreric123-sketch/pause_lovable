@@ -58,7 +58,15 @@ export const homeSchema = () => ({
 export const faqPageSchema = (faqs: Faq[]) => ({
   "@context": "https://schema.org",
   "@graph": [
-    { ...faqPage(faqs, `${ORIGIN}/faq#faqpage`), url: `${ORIGIN}/faq`, isPartOf: { "@id": ids.website } },
+    { ...faqPage(faqs, `${ORIGIN}/faq#faqpage`), url: `${ORIGIN}/faq`, isPartOf: { "@id": ids.website }, publisher: { "@id": ids.organization } },
+    org,
+    {
+      "@type": "WebSite",
+      "@id": ids.website,
+      name: "Pause",
+      url: `${ORIGIN}/`,
+      publisher: { "@id": ids.organization },
+    },
     {
       "@type": "BreadcrumbList",
       itemListElement: [
