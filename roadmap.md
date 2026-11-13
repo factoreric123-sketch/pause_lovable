@@ -67,3 +67,9 @@
 
 - [x] Replace /faq with the supplied 19 questions in two ordered groups without changing other pages
 - [x] Verify every answer and matching structured data in server HTML, plus accordion behavior
+
+# FAQ internal links and schema
+
+- [x] Check requested article URLs and add available contextual links
+- [x] Merge all 19 FAQs with linked WebSite and Organization nodes without changing route metadata
+- [x] Verify raw HTML, schema consistency and accordion visibility
