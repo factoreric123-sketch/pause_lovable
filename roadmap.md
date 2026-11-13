@@ -65,5 +65,5 @@
 
 # Dedicated FAQ update
 
-- [ ] Replace /faq with the supplied 19 questions in two ordered groups without changing other pages
-- [ ] Verify every answer and matching structured data in server HTML, plus accordion behavior
+- [x] Replace /faq with the supplied 19 questions in two ordered groups without changing other pages
+- [x] Verify every answer and matching structured data in server HTML, plus accordion behavior
