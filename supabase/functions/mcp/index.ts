@@ -42,6 +42,7 @@ var get_site_links_default = defineTool2({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const links = {
+      how_much_screen_time_too_much: "https://pauseappblocker.com/blog/how-much-screen-time-too-much",
       blocked_app_still_works_in_browser: "https://pauseappblocker.com/blog/blocked-app-still-works-in-browser",
       phone_instead_of_reading: "https://pauseappblocker.com/blog/phone-instead-of-reading",
       do_app_blockers_work: "https://pauseappblocker.com/blog/do-app-blockers-work",
