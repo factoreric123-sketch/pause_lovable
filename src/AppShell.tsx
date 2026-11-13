@@ -32,6 +32,7 @@ import StopCheckingPhoneAtWork from "./pages/StopCheckingPhoneAtWork";
 import ScreenTimeNotWorking from "./pages/ScreenTimeNotWorking";
 import AppBlockerYouCantDelete from "./pages/AppBlockerYouCantDelete";
 import BlockedAppStillWorksInBrowser from "./pages/BlockedAppStillWorksInBrowser";
+import HowMuchScreenTimeTooMuch from "./pages/HowMuchScreenTimeTooMuch";
 import PhoneInsteadOfReading from "./pages/PhoneInsteadOfReading";
 import DoAppBlockersWork from "./pages/DoAppBlockersWork";
 import NotFound from "./pages/NotFound";
@@ -49,6 +50,7 @@ const AppShell = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/how-much-screen-time-too-much" element={<HowMuchScreenTimeTooMuch />} />
           <Route path="/blog/blocked-app-still-works-in-browser" element={<BlockedAppStillWorksInBrowser />} />
           <Route path="/blog/phone-instead-of-reading" element={<PhoneInsteadOfReading />} />
           <Route path="/blog/do-app-blockers-work" element={<DoAppBlockersWork />} />

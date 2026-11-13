@@ -35,6 +35,16 @@ const Blog = () => {
           <h2 id="latest-articles" className="text-2xl font-bold">Latest</h2>
           <div className="mt-6 grid max-w-3xl gap-6">
             <article className="surface-card surface-card-hover p-7 sm:p-9">
+              <p className="text-sm font-semibold text-accent">Screen time</p>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
+                <Link to="/blog/how-much-screen-time-too-much" className="transition-colors hover:text-accent">How Much Screen Time Is Too Much? No Official Limit</Link>
+              </h3>
+              <p className="mt-4 leading-relaxed text-muted-foreground">No health body publishes a daily screen time limit for adults. Here is what the guidelines actually say, where the two hour figure came from, and what to track.</p>
+              <Link to="/blog/how-much-screen-time-too-much" className="mt-6 inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80">
+                Read article <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
+            <article className="surface-card surface-card-hover p-7 sm:p-9">
               <p className="text-sm font-semibold text-accent">Screen Time</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
                 <Link to="/blog/blocked-app-still-works-in-browser" className="transition-colors hover:text-accent">Why Your Blocked App Still Works in Safari and Chrome</Link>
