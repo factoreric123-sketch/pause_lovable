@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Contact from "./pages/Contact";
+import FaqPage from "./pages/FaqPage";
 import Blog from "./pages/Blog";
 import RemoveIgnoreLimitScreenTime from "./pages/RemoveIgnoreLimitScreenTime";
 import DeleteAppBlockerBypassIphone from "./pages/DeleteAppBlockerBypassIphone";
@@ -46,6 +47,7 @@ const AppShell = () => {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FaqPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/blocked-app-still-works-in-browser" element={<BlockedAppStillWorksInBrowser />} />
           <Route path="/blog/phone-instead-of-reading" element={<PhoneInsteadOfReading />} />

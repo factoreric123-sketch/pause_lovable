@@ -9,7 +9,7 @@ const links = [
   { label: "How It Works", to: "/#how-it-works" },
   { label: "Features", to: "/#features" },
   { label: "Strict Mode", to: "/#strict-mode" },
-  { label: "FAQ", to: "/#faq" },
+  { label: "FAQ", to: "/faq" },
   { label: "Blog", to: "/blog" },
 ];
 
