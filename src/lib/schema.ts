@@ -27,7 +27,7 @@ export const faqPage = (faqs: Faq[], id?: string) => ({
   })),
 });
 
-export const homeSchema = (faqs: Faq[]) => ({
+export const homeSchema = () => ({
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,7 +52,20 @@ export const homeSchema = (faqs: Faq[]) => ({
       publisher: { "@id": ids.organization },
       mainEntity: { "@id": ids.software },
     },
-    faqPage(faqs, ids.faq),
+  ],
+});
+
+export const faqPageSchema = (faqs: Faq[]) => ({
+  "@context": "https://schema.org",
+  "@graph": [
+    { ...faqPage(faqs, `${ORIGIN}/faq#faqpage`), url: `${ORIGIN}/faq`, isPartOf: { "@id": ids.website } },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${ORIGIN}/` },
+        { "@type": "ListItem", position: 2, name: "FAQ", item: `${ORIGIN}/faq` },
+      ],
+    },
   ],
 });
 

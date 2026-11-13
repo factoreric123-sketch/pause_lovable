@@ -52,6 +52,7 @@ var get_site_links_default = defineTool2({
       block_instagram_iphone: "https://pauseappblocker.com/blog/block-instagram-iphone",
       home: "https://pauseappblocker.com/",
       blog: "https://pauseappblocker.com/blog",
+      faq: "https://pauseappblocker.com/faq",
       remove_ignore_limit_guide: "https://pauseappblocker.com/blog/remove-ignore-limit-screen-time",
       opal_alternatives: "https://pauseappblocker.com/blog/opal-alternatives",
       brick_alternatives: "https://pauseappblocker.com/blog/brick-alternatives",
