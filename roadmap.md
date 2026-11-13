@@ -62,3 +62,8 @@
 
 - [x] Add uploaded article, exact metadata, six FAQs and discovery links
 - [x] Verify article navigation, desktop/mobile layout and metadata
+
+# Dedicated FAQ update
+
+- [x] Replace /faq with the supplied 19 questions in two ordered groups without changing other pages
+- [x] Verify every answer and matching structured data in server HTML, plus accordion behavior
