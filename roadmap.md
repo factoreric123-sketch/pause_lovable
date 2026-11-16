@@ -78,4 +78,4 @@
 # Delete or block Instagram article
 
 - [x] Add supplied article, exact metadata, six FAQs and discovery links
-- [ ] Verify article navigation, desktop/mobile layout and server-rendered content
+- [x] Verify article navigation, desktop/mobile layout and server-rendered content
