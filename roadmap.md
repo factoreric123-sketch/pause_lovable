@@ -73,3 +73,9 @@
 - [x] Check requested article URLs and add available contextual links
 - [x] Merge all 19 FAQs with linked WebSite and Organization nodes without changing route metadata
 - [x] Verify raw HTML, schema consistency and accordion visibility
+
+
+# Delete or block Instagram article
+
+- [x] Add supplied article, exact metadata, six FAQs and discovery links
+- [x] Verify article navigation, desktop/mobile layout and server-rendered content
