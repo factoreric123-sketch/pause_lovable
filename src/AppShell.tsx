@@ -32,6 +32,7 @@ import StopCheckingPhoneAtWork from "./pages/StopCheckingPhoneAtWork";
 import ScreenTimeNotWorking from "./pages/ScreenTimeNotWorking";
 import AppBlockerYouCantDelete from "./pages/AppBlockerYouCantDelete";
 import BlockedAppStillWorksInBrowser from "./pages/BlockedAppStillWorksInBrowser";
+import IphoneScreenTimeWrong from "./pages/IphoneScreenTimeWrong";
 import DeleteOrBlockInstagram from "./pages/DeleteOrBlockInstagram";
 import HowMuchScreenTimeTooMuch from "./pages/HowMuchScreenTimeTooMuch";
 import PhoneInsteadOfReading from "./pages/PhoneInsteadOfReading";
@@ -51,6 +52,7 @@ const AppShell = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/iphone-screen-time-wrong" element={<IphoneScreenTimeWrong />} />
           <Route path="/blog/delete-or-block-instagram" element={<DeleteOrBlockInstagram />} />
           <Route path="/blog/how-much-screen-time-too-much" element={<HowMuchScreenTimeTooMuch />} />
           <Route path="/blog/blocked-app-still-works-in-browser" element={<BlockedAppStillWorksInBrowser />} />

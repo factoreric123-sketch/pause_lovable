@@ -79,3 +79,9 @@
 
 - [x] Add supplied article, exact metadata, six FAQs and discovery links
 - [x] Verify article navigation, desktop/mobile layout and server-rendered content
+
+
+# Screen Time reporting article
+
+- [x] Add supplied article, exact metadata, six FAQs and discovery links
+- [x] Verify article navigation, phone/desktop layout and server-rendered content
