@@ -45,8 +45,22 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-12 border-t border-border/60 pt-6 text-xs text-muted-foreground/70">
-        © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+      <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-border/60 pt-6 text-xs text-muted-foreground/70">
+        <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</span>
+        <a
+          href="https://fazier.com/launches/pauseappblocker.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Pause on Fazier"
+        >
+          <img
+            src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=neutral"
+            width={120}
+            alt="Fazier badge"
+            className="h-auto w-[120px]"
+            loading="lazy"
+          />
+        </a>
       </div>
     </div>
   </footer>
