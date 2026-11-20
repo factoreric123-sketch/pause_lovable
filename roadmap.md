@@ -85,3 +85,9 @@
 
 - [x] Add supplied article, exact metadata, six FAQs and discovery links
 - [x] Verify article navigation, phone/desktop layout and server-rendered content
+
+
+# Screen Time passcode recovery article
+
+- [x] Add supplied draft, exact metadata, six FAQs and discovery links
+- [x] Verify article navigation, phone/desktop layout and server-rendered content

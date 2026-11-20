@@ -42,6 +42,7 @@ var get_site_links_default = defineTool2({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const links = {
+      screen_time_passcode_backdoor: "https://pauseappblocker.com/blog/screen-time-passcode-backdoor",
       iphone_screen_time_wrong: "https://pauseappblocker.com/blog/iphone-screen-time-wrong",
       delete_or_block_instagram: "https://pauseappblocker.com/blog/delete-or-block-instagram",
       how_much_screen_time_too_much: "https://pauseappblocker.com/blog/how-much-screen-time-too-much",
