@@ -8,6 +8,7 @@ export default defineTool({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
     const links = {
+      block_youtube_iphone: "https://pauseappblocker.com/blog/block-youtube-iphone",
       screen_time_passcode_backdoor: "https://pauseappblocker.com/blog/screen-time-passcode-backdoor",
       iphone_screen_time_wrong: "https://pauseappblocker.com/blog/iphone-screen-time-wrong",
       delete_or_block_instagram: "https://pauseappblocker.com/blog/delete-or-block-instagram",

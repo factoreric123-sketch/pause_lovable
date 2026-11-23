@@ -112,3 +112,8 @@
 - [x] Verify profile URLs and add reachable profiles only
 - [x] Merge the blog CollectionPage, site, organization and two-level breadcrumbs into one graph
 - [x] Verify every page's JSON-LD, unchanged content and unchanged ItemList order
+
+# YouTube blocking article
+
+- [x] Add supplied draft, exact metadata, six FAQs, publication date and discovery links
+- [x] Verify navigation, phone/desktop layout, matching schema and server-rendered text
