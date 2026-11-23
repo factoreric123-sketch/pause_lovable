@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -45,6 +46,7 @@ const StopCheckingPhoneAtWork = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">Focus</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
 
           <p>Most advice about phone distraction at work was written for an office. Put it in a drawer. Face it down. Do not let your manager catch you scrolling.</p>

@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -56,6 +57,7 @@ const ScreenTimePasscodeBackdoor = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">Screen Time</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
           <p>{"Short answer: if Screen Time Passcode Recovery is set up, you can reset your own Screen Time passcode in about thirty seconds using your Apple Account, even when someone else chose the code for you. Settings, Screen Time, Change Screen Time Passcode, Forgot Passcode, sign in, done. Every restriction you configured is gone."}</p>
           <p>{"This matters because the most common advice in this space is to have a partner or friend set your passcode. That advice is incomplete, and most people following it have a lock with the key taped to the back."}</p>

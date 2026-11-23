@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -53,6 +54,7 @@ const JomoAlternatives = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">App blockers</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
 
           <p>Jomo is one of the better app blockers on iPhone, and it costs far less than Opal. Jomo Plus is $5.99 a month or $29.99 a year, which works out to roughly $2.49 a month billed annually.</p>

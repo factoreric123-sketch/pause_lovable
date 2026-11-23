@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -45,6 +46,7 @@ const HowAppBlockersWorkIphone = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">How it works</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
 
           <p>Every app blocker on the App Store claims to be strict. Almost none of them explain what is actually happening on your phone when a block fires, which is why so many people end up confused about what they bought.</p>

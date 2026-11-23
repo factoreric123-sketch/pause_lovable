@@ -4,3 +4,4 @@
 - Structured data: pages render one JSON-LD graph inline from builders in src/lib/schema.ts, reading post headline/dates from src/prerender-routes.ts and FAQs from the same arrays the page displays, so schema ships in prerendered HTML and can't drift from visible text.
 - Prerender-safe motion: use the shared Reveal wrapper for entrance animations so server HTML stays visible and animations begin only after hydration.
 - Screenshot delivery: serve size-matched WebP variants through asset pointers for displayed screenshots, keeping original source images separate so mobile transfers stay small.
+- Blog dates: use PostDates and the UTC date formatter with route metadata for article headers and index cards, so visible dates and JSON-LD stay synchronized; set source dates from verified first-added and genuine-edit commits, not rendering or deployment time.

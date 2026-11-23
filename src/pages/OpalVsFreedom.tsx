@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -51,6 +52,7 @@ const OpalVsFreedom = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">App blockers</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
 
           <p>Short answer: choose Opal if your iPhone is the only device you need to block, because it is built natively on Apple’s Screen Time framework and the iOS experience is better. Choose Freedom if you also get distracted on a laptop, because blocking your phone while your MacBook stays open solves nothing.</p>

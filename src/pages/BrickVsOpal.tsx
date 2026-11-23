@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -45,6 +46,7 @@ const BrickVsOpal = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">App blockers</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
 
           <p>Short answer: buy the Brick if you have already defeated two or three software blockers, because physical distance is the only friction you cannot argue with. Pay for Opal if you want to understand your phone habits in detail and will actually read the reports.</p>

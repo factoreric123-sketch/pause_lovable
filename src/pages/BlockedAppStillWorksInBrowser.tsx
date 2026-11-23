@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -56,6 +57,7 @@ const BlockedAppStillWorksInBrowser = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">App blockers</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
           <p>{"Short answer: because blocking an app and blocking a website are two separate systems on an iPhone. Screen Time’s app limits stop the app. They do not reliably stop the same service from loading as a website, and any browser that is not Safari sits outside Screen Time’s website filtering entirely. Block Instagram in the app, open Instagram in Chrome, and nothing stops you."}</p>
           <p>{"Here is what is actually happening and how to close it."}</p>

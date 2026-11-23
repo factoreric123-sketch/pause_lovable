@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -76,6 +77,7 @@ const BestAppBlockersIphone = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">App blockers</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
 
           <p>Most "best app blocker for iPhone" lists rank on features. That's the wrong test. Nobody quits a blocker because it lacked a widget; they quit because they found the way around it in week two.</p>

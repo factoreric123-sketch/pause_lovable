@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -56,6 +57,7 @@ const HowMuchScreenTimeTooMuch = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">Screen time</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
           <p>{"Short answer: no major health body publishes a daily screen time limit for adults. The WHO, AAP, APA, and CDC all set guidance for young children and none for adults, which means the widely repeated “experts recommend two hours” figure has no authoritative source behind it. The useful question is not how many hours you spend on screens. It is what those hours are replacing."}</p>
           <p>{"Here is what the guidance actually says, where the two-hour number came from, and what to measure instead."}</p>

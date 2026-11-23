@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -56,6 +57,7 @@ const DeleteOrBlockInstagram = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">Social media</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
           <p>{"Short answer: it comes down to one question. If direct messages matter to you, block it. If they do not, delete it, because deletion is cleaner and nothing about your account disappears when the app does. Most people who delete end up reinstalling within weeks, and the reason is structural rather than a willpower failure."}</p>
           <p>{"Here is how to decide, and why the deleting and reinstalling loop happens to so many people."}</p>

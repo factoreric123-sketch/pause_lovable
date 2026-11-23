@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -45,6 +46,7 @@ const BlockTiktokIphone = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">Social media</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
 
           <p>You have probably already tried TikTok's own screen time limit. You set an hour, hit it a few days later, and then discovered you could tap straight past it using a passcode you chose yourself.</p>

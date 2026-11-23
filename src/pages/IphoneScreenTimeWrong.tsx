@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -56,6 +57,7 @@ const IphoneScreenTimeWrong = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">Screen Time</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
           <p>{"Short answer: usually it is not wrong; it is measuring something different from what you assume. Screen Time counts background activity, notification wake-ups, and activity from every Apple device sharing your Apple Account, while missing audio played with the screen off. Before concluding the report is broken, check the per-app breakdown, because the explanation is almost always in there."}</p>
           <p>{"Here is what inflates the number, what deflates it, and how to tell a genuine fault from normal behaviour."}</p>

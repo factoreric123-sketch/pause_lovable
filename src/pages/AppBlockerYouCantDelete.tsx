@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -56,6 +57,7 @@ const AppBlockerYouCantDelete = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">App blockers</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
           <p>Short answer: partly. An iPhone app blocker can stop you deleting it, but only while a block session is active, and only by switching off app deletion across your entire phone. It cannot stop you revoking its Screen Time permission in Settings. No app blocker on iOS is impossible to turn off.</p>
           <p>That is the honest answer, and most pages searching for an app blocker you can't delete either skip it or stop halfway. Here is what each layer of protection actually does, and the exact point where each one breaks.</p>

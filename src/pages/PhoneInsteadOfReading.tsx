@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -56,6 +57,7 @@ const PhoneInsteadOfReading = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">App blockers</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
           <p>{"Short answer: because reading costs effort and your phone costs none. By the time you notice you have reached for it, the decision has already happened. Phone reaching is an automatic habit that runs before conscious thought catches up, so trying to beat it with willpower means using a system that is offline to override one that is already running."}</p>
           <p>{"This is not a reading problem. It is a cost problem at a specific moment, and that moment is fixable."}</p>

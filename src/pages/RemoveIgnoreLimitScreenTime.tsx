@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -60,6 +61,7 @@ const RemoveIgnoreLimitScreenTime = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">Screen Time</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
 
           <p>You set a 30-minute limit on Instagram. You hit it. A grey screen appears, you tap Ignore Limit for Today, and you&apos;re back in the feed before you&apos;ve finished reading the warning.</p>

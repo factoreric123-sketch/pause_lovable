@@ -96,3 +96,8 @@
 
 - [x] Update only the social media article metadata and its blog card description
 - [x] Verify all six raw HTML head tags and unchanged article heading, body and canonical
+
+# Approved blog dates
+
+- [x] Add approved publication dates to every article and index card, with updated dates for genuine edits
+- [x] Verify matching server HTML and schema dates for all 27 posts, plus newest-first index positions

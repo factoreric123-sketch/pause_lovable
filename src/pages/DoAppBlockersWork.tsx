@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
@@ -56,6 +57,7 @@ const DoAppBlockersWork = () => {
           <header className="border-b border-border pb-10">
             <p className="section-label">App blockers</p>
             <h1>{getRoute(path).headline}</h1>
+            <PostDates path={path} showModified className="mt-4" />
           </header>
           <p>{"Short answer: yes, while they are running. Studies consistently find that app blockers reduce screen time by measurable amounts. Two findings qualify that. Apps that only track your usage barely change behaviour at all, and the reduction often fades once the tool is removed. How hard a block is to bypass predicts how well it works."}</p>
           <p>{"Here is what the actual research says, including the parts the studies themselves admit."}</p>
