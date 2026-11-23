@@ -27,7 +27,7 @@ export const faqPage = (faqs: Faq[], id?: string) => ({
   })),
 });
 
-export const homeSchema = () => ({
+export const homeSchema = (faqs: Faq[] = []) => ({
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -52,6 +52,12 @@ export const homeSchema = () => ({
       publisher: { "@id": ids.organization },
       mainEntity: { "@id": ids.software },
     },
+    ...(faqs.length ? [{
+      ...faqPage(faqs, ids.faq),
+      url: `${ORIGIN}/`,
+      isPartOf: { "@id": ids.website },
+      publisher: { "@id": ids.organization },
+    }] : []),
   ],
 });
 

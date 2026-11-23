@@ -12,8 +12,9 @@ import TrustPoints from "@/components/pause/TrustPoints";
 import { setCanonical } from "@/lib/canonical";
 import { homeSchema } from "@/lib/schema";
 import StrictBlockerIntro from "@/components/pause/StrictBlockerIntro";
+import HomeFaq, { homeFaqs } from "@/components/pause/HomeFaq";
 
-const schema = homeSchema();
+const schema = homeSchema(homeFaqs);
 const Index = () => {
   const { hash } = useLocation();
   useEffect(() => {
@@ -35,6 +36,7 @@ const Index = () => {
         <RulesOverview />
         <HardMode />
         <PrivacySection />
+        <HomeFaq />
         <FinalCta />
       </main>
       <Footer />

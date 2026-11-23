@@ -5,3 +5,4 @@
 - Prerender-safe motion: use the shared Reveal wrapper for entrance animations so server HTML stays visible and animations begin only after hydration.
 - Screenshot delivery: serve size-matched WebP variants through asset pointers for displayed screenshots, keeping original source images separate so mobile transfers stay small.
 - Blog dates: use PostDates and the UTC date formatter with route metadata for article headers and index cards, so visible dates and JSON-LD stay synchronized; set source dates from verified first-added and genuine-edit commits, not rendering or deployment time.
+- Keep the homepage's short FAQ data separate from the dedicated FAQ page and pass it into homeSchema, so homepage edits cannot change /faq.
