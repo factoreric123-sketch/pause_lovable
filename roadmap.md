@@ -106,3 +106,9 @@
 
 - [x] Add five supplied questions after Privacy with a /faq link and matching linked homepage schema
 - [x] Verify raw HTML, accordion behavior and unchanged /faq and other pages
+
+# Organization profiles and blog graph
+
+- [x] Verify profile URLs and add reachable profiles only
+- [x] Merge the blog CollectionPage, site, organization and two-level breadcrumbs into one graph
+- [x] Verify every page's JSON-LD, unchanged content and unchanged ItemList order

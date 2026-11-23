@@ -11,8 +11,11 @@ const ids = {
   software: `${ORIGIN}/#software-application`,
   faq: `${ORIGIN}/#faq`,
 };
-// Add verified developer and social profile URLs here when provided.
-const organizationProfiles: string[] = [];
+// Include only verified, publicly reachable product profiles.
+const organizationProfiles: string[] = [
+  SITE_CONFIG.appStoreUrl,
+  "https://fazier.com/launches/pause-app-blocker",
+];
 const org = { "@type": "Organization", "@id": ids.organization, name: "Pause", url: `${ORIGIN}/`, logo: LOGO_URL, sameAs: organizationProfiles };
 
 export interface Faq { question: string; answer: string }
@@ -119,18 +122,40 @@ export const blogIndexSchema = () => {
   const posts = [...BLOG_POSTS].sort((a, b) => (b.datePublished ?? "").localeCompare(a.datePublished ?? ""));
   return {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: r.title,
-    description: r.description,
-    url: abs("/blog"),
-    mainEntity: {
-      "@type": "ItemList",
-      itemListElement: posts.map((p, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        url: abs(p.path),
-        name: p.headline,
-      })),
-    },
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${abs("/blog")}#collectionpage`,
+        name: r.title,
+        description: r.description,
+        url: abs("/blog"),
+        isPartOf: { "@id": ids.website },
+        publisher: { "@id": ids.organization },
+        mainEntity: {
+          "@type": "ItemList",
+          itemListElement: posts.map((p, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            url: abs(p.path),
+            name: p.headline,
+          })),
+        },
+      },
+      org,
+      {
+        "@type": "WebSite",
+        "@id": ids.website,
+        name: "Pause",
+        url: `${ORIGIN}/`,
+        publisher: { "@id": ids.organization },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${ORIGIN}/` },
+          { "@type": "ListItem", position: 2, name: "Blog", item: abs("/blog") },
+        ],
+      },
+    ],
   };
 };

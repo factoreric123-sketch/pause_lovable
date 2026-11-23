@@ -161,9 +161,27 @@ describe("approved blog dates", () => {
   });
 
   it("orders the index newest first with consecutive positions 1 to 27", () => {
-    const items = blogIndexSchema().mainEntity.itemListElement;
+    const collection = blogIndexSchema()["@graph"].find(node => node["@type"] === "CollectionPage");
+    if (!collection || !("mainEntity" in collection) || !collection.mainEntity) throw new Error("Missing blog collection");
+    const items = collection.mainEntity.itemListElement;
     const expected = [...approvedDates].sort((a, b) => b[1].localeCompare(a[1]));
     expect(items.map(item => item.url)).toEqual(expected.map(([path]) => `https://pauseappblocker.com${path}`));
     expect(items.map(item => item.position)).toEqual(Array.from({ length: 27 }, (_, index) => index + 1));
+  });
+  it("links the blog collection to its site and organization with two breadcrumb levels", () => {
+    const graph = blogIndexSchema()["@graph"];
+    const collection = graph.find(node => node["@type"] === "CollectionPage");
+    expect(collection).toMatchObject({
+      isPartOf: { "@id": "https://pauseappblocker.com/#website" },
+      publisher: { "@id": "https://pauseappblocker.com/#organization" },
+    });
+    expect(graph.find(node => node["@type"] === "WebSite")).toMatchObject({ "@id": "https://pauseappblocker.com/#website" });
+    expect(graph.find(node => node["@type"] === "Organization")).toMatchObject({ "@id": "https://pauseappblocker.com/#organization" });
+    expect(graph.find(node => node["@type"] === "BreadcrumbList")).toMatchObject({
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://pauseappblocker.com/" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: "https://pauseappblocker.com/blog" },
+      ],
+    });
   });
 });
