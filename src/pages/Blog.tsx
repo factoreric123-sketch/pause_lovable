@@ -383,7 +383,7 @@ const Blog = () => {
                 </Link>
               </h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">
-                Five methods that work, from free Screen Time steps to a blocker with no override — including the browser versions most guides forget.
+                Most guides block the app and leave the website open. Here are five methods for iPhone, ranked by how hard each one is to tap past.
               </p>
               <Link
                 to="/blog/block-social-media-iphone"

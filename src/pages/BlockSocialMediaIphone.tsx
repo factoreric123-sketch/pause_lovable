@@ -8,9 +8,9 @@ import { SITE } from "@/config/site";
 import { blogPostSchema } from "@/lib/schema";
 import { getRoute } from "@/prerender-routes";
 
-const title = "How to Block Social Media on iPhone (2026 Guide)";
+const title = "How to Block Social Media on iPhone (So It Actually Holds)";
 const description =
-  "Block Instagram, TikTok, YouTube, Reddit and X on iPhone — apps and the browser versions most guides forget. Free Screen Time methods plus what to do when they fail.";
+  "Most guides block the app and leave the website open. Here are five methods for iPhone, ranked by how hard each one is to tap past.";
 const path = "/blog/block-social-media-iphone";
 
 const faqs = [

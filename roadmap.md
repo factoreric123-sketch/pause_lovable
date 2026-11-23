@@ -91,3 +91,8 @@
 
 - [x] Add supplied draft, exact metadata, six FAQs and discovery links
 - [x] Verify article navigation, phone/desktop layout and server-rendered content
+
+# Social media metadata test
+
+- [x] Update only the social media article metadata and its blog card description
+- [x] Verify all six raw HTML head tags and unchanged article heading, body and canonical
