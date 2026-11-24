@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/pause/Footer";
 import Navbar from "@/components/pause/Navbar";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import PostDates from "@/components/pause/PostDates";
 import { setCanonical, setSocialMeta } from "@/lib/canonical";
 import { SITE } from "@/config/site";
@@ -11,7 +12,32 @@ import { getRoute } from "@/prerender-routes";
 
 const path = "/blog/block-x-twitter-iphone";
 const { title, description } = getRoute(path);
-const faqs: { question: string; answer: string }[] = [];
+const faqs = [
+  {
+    "question": "Why can I still open X after blocking the app?",
+    "answer": "Because app limits and website restrictions are separate controls on iPhone. Blocking the app stops the app only, and X works perfectly well in a browser. You need the domains on the Never Allow list as a separate step."
+  },
+  {
+    "question": "Does blocking x.com also block twitter.com?",
+    "answer": "No. They are treated as different domains and both still work. twitter.com was never retired after the rename, so a block that covers only x.com leaves the original address completely open. Add both, plus mobile.twitter.com."
+  },
+  {
+    "question": "Why does X show as Twitter in Screen Time?",
+    "answer": "Some iOS versions still list the app under its old name. If you expand the Social category and cannot find X, look for Twitter. The entry controls the same app either way."
+  },
+  {
+    "question": "How do I block X on iPhone for free?",
+    "answer": "Screen Time covers it at no cost. Set an App Limit, called a Time Allowance on iOS 27, with blocking at the end of the limit, then add the X domains under Web Content. Both are built into iOS. Several third-party blockers are also free."
+  },
+  {
+    "question": "How do I stop myself reinstalling X after deleting it?",
+    "answer": "Set Installing Apps to Don't Allow under Content and Privacy Restrictions, iTunes and App Store Purchases. Without that, deleting the app accomplishes very little, since your account, followers and timeline survive and reinstalling takes seconds."
+  },
+  {
+    "question": "What is the strongest way to block X on iPhone?",
+    "answer": "All of it together: a short limit on the app with blocking at the end, all three X domains on the Never Allow list, no unfiltered browsers installed, reinstalls disabled, and a Screen Time passcode someone else chose with recovery turned off. Any single layer on its own is straightforward to get around."
+  }
+];
 const schema = blogPostSchema(path, faqs);
 
 const BlockXTwitterIphone = () => {
@@ -59,6 +85,15 @@ const BlockXTwitterIphone = () => {
           <p>{"If managing six settings is more than you want, a blocker without an override button handles the app side in one place. Pause is free, so you can pair it with the domain list above and see whether the combination survives a bad evening."}</p>
           <p>For the other platforms, see our <Link to="/blog/block-social-media-iphone">full guide to blocking social media on iPhone</Link>.</p>
           <p><a href={SITE.appStoreUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-semibold text-accent hover:text-foreground">Download Pause free for iPhone <ArrowRight className="h-4 w-4" /></a></p>
+          <h2>Frequently asked questions</h2>
+          <Accordion type="single" collapsible className="not-prose">
+            {faqs.map(({ question, answer }) => (
+              <AccordionItem key={question} value={question} className="border-border/70">
+                <AccordionTrigger className="mt-0 text-left font-display text-lg font-semibold hover:no-underline">{question}</AccordionTrigger>
+                <AccordionContent forceMount className="text-base leading-relaxed text-muted-foreground">{answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </article>
       </main>
       <Footer />
