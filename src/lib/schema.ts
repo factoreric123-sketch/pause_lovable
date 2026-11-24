@@ -112,7 +112,7 @@ export const blogPostSchema = (path: string, faqs: Faq[]) => {
           { "@type": "ListItem", position: 3, name: r.headline, item: url },
         ],
       },
-      faqPage(faqs),
+      ...(faqs.length ? [faqPage(faqs)] : []),
     ],
   };
 };

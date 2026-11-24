@@ -33,6 +33,7 @@ import ScreenTimeNotWorking from "./pages/ScreenTimeNotWorking";
 import AppBlockerYouCantDelete from "./pages/AppBlockerYouCantDelete";
 import BlockedAppStillWorksInBrowser from "./pages/BlockedAppStillWorksInBrowser";
 import BlockYoutubeIphone from "./pages/BlockYoutubeIphone";
+import BlockXTwitterIphone from "./pages/BlockXTwitterIphone";
 import ScreenTimePasscodeBackdoor from "./pages/ScreenTimePasscodeBackdoor";
 import IphoneScreenTimeWrong from "./pages/IphoneScreenTimeWrong";
 import DeleteOrBlockInstagram from "./pages/DeleteOrBlockInstagram";
@@ -54,6 +55,7 @@ const AppShell = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/block-x-twitter-iphone" element={<BlockXTwitterIphone />} />
           <Route path="/blog/block-youtube-iphone" element={<BlockYoutubeIphone />} />
           <Route path="/blog/screen-time-passcode-backdoor" element={<ScreenTimePasscodeBackdoor />} />
           <Route path="/blog/iphone-screen-time-wrong" element={<IphoneScreenTimeWrong />} />

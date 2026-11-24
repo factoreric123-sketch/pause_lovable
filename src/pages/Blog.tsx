@@ -38,6 +38,17 @@ const Blog = () => {
             <article className="surface-card surface-card-hover p-7 sm:p-9">
               <p className="text-sm font-semibold text-accent">Social media</p>
               <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
+                <Link to="/blog/block-x-twitter-iphone" className="transition-colors hover:text-accent">How to Block X (Twitter) on iPhone (App and Website)</Link>
+              </h3>
+              <PostDates path="/blog/block-x-twitter-iphone" className="mt-3" />
+              <p className="mt-4 leading-relaxed text-muted-foreground">Blocking the X app leaves twitter.com open in Safari. Here is how to block X properly on iPhone, every domain included, and make the block hold.</p>
+              <Link to="/blog/block-x-twitter-iphone" className="mt-6 inline-flex items-center gap-2 font-semibold text-accent transition-opacity hover:opacity-80">
+                Read article <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
+            <article className="surface-card surface-card-hover p-7 sm:p-9">
+              <p className="text-sm font-semibold text-accent">Social media</p>
+              <h3 className="mt-3 text-2xl font-bold sm:text-3xl">
                 <Link to="/blog/block-youtube-iphone" className="transition-colors hover:text-accent">How to Block YouTube on iPhone (App, Website, Shorts)</Link>
               </h3>
               <PostDates path="/blog/block-youtube-iphone" className="mt-3" />
