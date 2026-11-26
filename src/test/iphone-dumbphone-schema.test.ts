@@ -1,8 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { blogPostSchema } from "@/lib/schema";
+import { faqs } from "@/pages/IphoneDumbphoneMode";
 
 describe("iPhone dumbphone article schema", () => {
-  const graph = blogPostSchema("/blog/iphone-dumbphone-mode", [], true)["@graph"];
+  const graph = blogPostSchema("/blog/iphone-dumbphone-mode", faqs, true)["@graph"];
 
   it("uses 26 November 2026 for both requested dates", () => {
     expect(graph.find(node => node["@type"] === "BlogPosting")).toMatchObject({
@@ -21,7 +22,16 @@ describe("iPhone dumbphone article schema", () => {
     expect(graph.find(node => node["@type"] === "Organization")).toMatchObject({ "@id": "https://pauseappblocker.com/#organization" });
   });
 
-  it("omits FAQ schema until questions are supplied", () => {
-    expect(graph.some(node => node["@type"] === "FAQPage")).toBe(false);
+  it("includes the six supplied questions in one FAQPage node", () => {
+    const nodes = graph.filter(node => node["@type"] === "FAQPage");
+    expect(nodes).toHaveLength(1);
+    expect(nodes[0]).toMatchObject({
+      mainEntity: faqs.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    });
+    expect(faqs).toHaveLength(6);
   });
 });

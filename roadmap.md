@@ -122,3 +122,8 @@
 
 - [x] Add the supplied body, exact metadata, today's dates, linked graph and discovery entries without FAQs
 - [x] Verify article navigation, desktop/mobile layout and complete text without JavaScript
+
+# iPhone dumbphone FAQs
+
+- [x] Add the six supplied FAQs and matching schema; confirm newest blog entry and page-specific sitemap date
+- [x] Verify raw HTML without JavaScript, accordion behavior and sequential ItemList positions
