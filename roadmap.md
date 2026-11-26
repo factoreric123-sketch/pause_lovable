@@ -117,3 +117,8 @@
 
 - [x] Add supplied draft, exact metadata, six FAQs, publication date and discovery links
 - [x] Verify navigation, phone/desktop layout, matching schema and server-rendered text
+
+# iPhone dumbphone article
+
+- [x] Add the supplied body, exact metadata, today's dates, linked graph and discovery entries without FAQs
+- [x] Verify article navigation, desktop/mobile layout and complete text without JavaScript

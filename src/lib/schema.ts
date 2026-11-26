@@ -86,7 +86,7 @@ export const faqPageSchema = (faqs: Faq[]) => ({
   ],
 });
 
-export const blogPostSchema = (path: string, faqs: Faq[]) => {
+export const blogPostSchema = (path: string, faqs: Faq[], linkedSite = false) => {
   const r = getRoute(path);
   const url = abs(path);
   return {
@@ -101,8 +101,9 @@ export const blogPostSchema = (path: string, faqs: Faq[]) => {
         mainEntityOfPage: { "@type": "WebPage", "@id": url },
         url,
         image: LOGO_URL,
-        author: org,
-        publisher: org,
+        author: linkedSite ? { "@id": ids.organization } : org,
+        publisher: linkedSite ? { "@id": ids.organization } : org,
+        ...(linkedSite ? { isPartOf: { "@id": ids.website } } : {}),
       },
       {
         "@type": "BreadcrumbList",
@@ -113,6 +114,13 @@ export const blogPostSchema = (path: string, faqs: Faq[]) => {
         ],
       },
       ...(faqs.length ? [faqPage(faqs)] : []),
+      ...(linkedSite ? [org, {
+        "@type": "WebSite",
+        "@id": ids.website,
+        name: "Pause",
+        url: `${ORIGIN}/`,
+        publisher: { "@id": ids.organization },
+      }] : []),
     ],
   };
 };

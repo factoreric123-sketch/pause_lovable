@@ -5,6 +5,7 @@ import { formatBlogDate } from "@/lib/blog-dates";
 
 // Approved first-added commit dates (UTC), with approved genuine-edit dates.
 const approvedDates = [
+  ["/blog/iphone-dumbphone-mode", "2026-11-26", "2026-11-26"],
   ["/blog/block-x-twitter-iphone", "2026-11-24", "2026-11-24"],
   ["/blog/block-youtube-iphone", "2026-11-23", "2026-11-23"],
   [
@@ -153,7 +154,7 @@ describe("approved blog dates", () => {
     expect(post).toMatchObject({ datePublished: published, dateModified: modified });
   });
 
-  it("covers all 29 current posts without unverified dates", () => {
+  it("covers all 30 current posts without unverified dates", () => {
     expect(BLOG_POSTS.map(post => post.path).sort()).toEqual(approvedDates.map(([path]) => path).sort());
   });
 
@@ -162,13 +163,13 @@ describe("approved blog dates", () => {
     expect(formatBlogDate("2026-09-22")).toBe("22 September 2026");
   });
 
-  it("orders the index newest first with consecutive positions 1 to 29", () => {
+  it("orders the index newest first with consecutive positions 1 to 30", () => {
     const collection = blogIndexSchema()["@graph"].find(node => node["@type"] === "CollectionPage");
     if (!collection || !("mainEntity" in collection) || !collection.mainEntity) throw new Error("Missing blog collection");
     const items = collection.mainEntity.itemListElement;
     const expected = [...approvedDates].sort((a, b) => b[1].localeCompare(a[1]));
     expect(items.map(item => item.url)).toEqual(expected.map(([path]) => `https://pauseappblocker.com${path}`));
-    expect(items.map(item => item.position)).toEqual(Array.from({ length: 29 }, (_, index) => index + 1));
+    expect(items.map(item => item.position)).toEqual(Array.from({ length: 30 }, (_, index) => index + 1));
   });
   it("links the blog collection to its site and organization with two breadcrumb levels", () => {
     const graph = blogIndexSchema()["@graph"];

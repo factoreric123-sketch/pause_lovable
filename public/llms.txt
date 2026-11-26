@@ -12,6 +12,7 @@
 An App List is a group of selected apps and supported websites. Pause requires no account, shows no ads, and is available free on the iPhone App Store.
 
 ## Pages
+- Can You Turn Your iPhone Into a Dumbphone? (2026): https://pauseappblocker.com/blog/iphone-dumbphone-mode
 - How to Block X (Twitter) on iPhone: App and Website: https://pauseappblocker.com/blog/block-x-twitter-iphone
 - How to Block YouTube on iPhone (App, Website, Shorts): https://pauseappblocker.com/blog/block-youtube-iphone
 - Screen Time Passcode Backdoor: the Forgot Passcode Reset: https://pauseappblocker.com/blog/screen-time-passcode-backdoor
